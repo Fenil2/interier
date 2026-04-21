@@ -6,7 +6,7 @@ import FadeIn from "./animations/FadeIn";
 
 const stats = [
   { value: "150+", label: "Projects Delivered" },
-  { value: "12",   label: "Design Awards" },
+  { value: "12+",   label: "Design Awards" },
   { value: "98%",  label: "Client Retention" },
   { value: "04",   label: "Global Offices" },
 ];
