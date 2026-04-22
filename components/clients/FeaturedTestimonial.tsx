@@ -1,7 +1,9 @@
+import FadeIn from "../animations/FadeIn";
+
 export default function FeaturedTestimonial() {
   return (
     <section className="max-w-[1440px] mx-auto px-4 sm:px-8 mb-16 md:mb-28">
-      <article className="grid grid-cols-1 overflow-hidden rounded-md border border-[#131b2e]/10 bg-white shadow-sm lg:grid-cols-12">
+      <FadeIn direction="up" className="grid grid-cols-1 overflow-hidden rounded-md border border-[#131b2e]/10 bg-white shadow-sm lg:grid-cols-12">
         <div className="lg:col-span-7">
           <img
             alt="Luxury residential interior delivered for a client"
@@ -29,7 +31,7 @@ export default function FeaturedTestimonial() {
             </p>
           </div>
         </div>
-      </article>
+      </FadeIn>
     </section>
   );
 }

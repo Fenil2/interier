@@ -53,7 +53,7 @@ export default function Navbar() {
             </motion.span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-7 xl:gap-10">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map(({ label, href }, i) => {
               const isActive = pathname === href;
               return (
@@ -65,10 +65,10 @@ export default function Navbar() {
                 >
                   <Link
                     href={href}
-                    className={`relative text-sm font-medium transition-colors duration-300 group pb-0.5 ${
+                    className={`relative text-[0.95rem] font-semibold transition-colors duration-300 group pb-1 ${
                       isActive
                         ? scrolled ? "text-[#e6c275]" : "text-[#131b2e]"
-                        : scrolled ? "text-white/70 hover:text-[#e6c275]" : "text-[#3c475a] hover:text-[#131b2e]"
+                        : scrolled ? "text-white/85 hover:text-[#f0d48a]" : "text-[#2f3e54] hover:text-[#131b2e]"
                     }`}
                   >
                     {label}
@@ -93,7 +93,7 @@ export default function Navbar() {
             >
               <Link href="/contact">
                 <motion.span
-                  className={`hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-sm font-semibold text-xs uppercase tracking-wider transition-colors duration-500 ${
+                  className={`hidden md:inline-flex min-h-11 items-center gap-2 px-5 py-2.5 rounded-sm font-bold text-[0.8rem] uppercase tracking-[0.08em] transition-colors duration-500 ${
                     scrolled
                       ? "bg-[#e6c275] text-[#131b2e] hover:bg-[#f0d48a]"
                       : "bg-[#131b2e] text-[#e6c275] hover:bg-[#1e2d48]"
@@ -108,7 +108,7 @@ export default function Navbar() {
             <motion.button
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle navigation"
-              className={`lg:hidden flex items-center justify-center w-10 h-10 rounded-sm transition-colors ${
+              className={`lg:hidden flex items-center justify-center w-11 h-11 rounded-sm transition-colors ${
                 scrolled ? "hover:bg-white/10" : "hover:bg-[#f0ede9]"
               }`}
               whileTap={{ scale: 0.9 }}

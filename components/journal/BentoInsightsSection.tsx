@@ -1,3 +1,5 @@
+import FadeIn from "../animations/FadeIn";
+
 const posts = [
   {
     category: "Materials",
@@ -59,7 +61,7 @@ export default function BentoInsightsSection() {
   return (
     <section className="bg-surface-container-low py-16 md:py-24">
       <div className="px-4 sm:px-8 max-w-[1440px] mx-auto">
-        <div className="mb-12 flex flex-col gap-4 md:mb-16 md:flex-row md:items-end md:justify-between">
+        <FadeIn direction="up" className="mb-12 flex flex-col gap-4 md:mb-16 md:flex-row md:items-end md:justify-between">
           <div>
             <span className="eyebrow mb-5">Latest Articles</span>
             <h3
@@ -73,12 +75,14 @@ export default function BentoInsightsSection() {
             Helpful reads for homeowners, founders, and project teams planning
             interiors, renovation, or construction work.
           </p>
-        </div>
+        </FadeIn>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {posts.map((post) => (
-            <article
+          {posts.map((post, index) => (
+            <FadeIn
               key={post.title}
+              direction="up"
+              delay={index * 0.06}
               className="group overflow-hidden rounded-md border border-[#131b2e]/10 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl"
             >
               <div className="aspect-[4/3] overflow-hidden bg-[#f0ede9]">
@@ -116,7 +120,7 @@ export default function BentoInsightsSection() {
                   </span>
                 </a>
               </div>
-            </article>
+            </FadeIn>
           ))}
         </div>
       </div>

@@ -1,9 +1,11 @@
+import FadeIn from "../animations/FadeIn";
+
 export default function NewsletterSection() {
   return (
     <section className="bg-[#131b2e] py-20 md:py-28">
       <div className="px-4 sm:px-8 max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12">
-          <div className="md:col-span-7">
+          <FadeIn direction="left" className="md:col-span-7">
             <span className="eyebrow mb-6">Blog Updates</span>
             <h3
               className="mb-4 max-w-3xl text-[2.2rem] font-bold leading-tight text-white md:text-[3.2rem]"
@@ -15,9 +17,9 @@ export default function NewsletterSection() {
               No noise, just useful ideas on interiors, materials, renovation
               sequencing, and project planning.
             </p>
-          </div>
+          </FadeIn>
 
-          <div className="md:col-span-5">
+          <FadeIn direction="right" delay={0.2} className="md:col-span-5">
             <div className="rounded-md border border-white/10 bg-white/[0.04] p-5 sm:p-6">
               <label
                 htmlFor="blog-email"
@@ -40,7 +42,7 @@ export default function NewsletterSection() {
                 Monthly blog digest. Unsubscribe whenever you like.
               </p>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

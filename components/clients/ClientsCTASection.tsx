@@ -1,8 +1,10 @@
+import FadeIn from "../animations/FadeIn";
+
 export default function ClientsCTASection() {
   return (
     <section className="bg-[#f6f3ee] py-20 md:py-28">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 items-center gap-10 rounded-md border border-[#131b2e]/10 bg-white p-6 shadow-sm md:grid-cols-12 md:p-10">
+        <FadeIn direction="up" className="grid grid-cols-1 items-center gap-10 rounded-md border border-[#131b2e]/10 bg-white p-6 shadow-sm md:grid-cols-12 md:p-10">
           <div className="md:col-span-8">
             <span className="eyebrow mb-6">Begin Your Journey</span>
             <h2
@@ -32,7 +34,7 @@ export default function ClientsCTASection() {
               View Portfolio
             </a>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

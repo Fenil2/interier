@@ -29,6 +29,7 @@ export default function HeroSection() {
           style={{ transformOrigin: "center" }}
         />
         <div className="absolute inset-0 hero-gradient" />
+        <div className="absolute inset-0 bg-[#0d1420]/20" />
       </motion.div>
 
       <motion.div
@@ -56,7 +57,7 @@ export default function HeroSection() {
           </div>
 
           <motion.p
-            className="mb-8 max-w-xl text-base leading-relaxed text-[#c8d3e0] sm:mb-10 sm:text-lg md:text-xl"
+            className="mb-8 max-w-xl text-base leading-relaxed text-[#e2e8f2] sm:mb-10 sm:text-lg md:text-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
@@ -73,7 +74,7 @@ export default function HeroSection() {
           >
             <motion.a
               href="/contact"
-              className="group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-sm bg-[#e6c275] px-6 py-4 text-xs font-bold uppercase tracking-widest text-[#131b2e] shadow-xl sm:px-8"
+              className="group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-sm bg-[#e6c275] px-6 py-4 text-sm font-bold uppercase tracking-[0.08em] text-[#131b2e] shadow-xl sm:px-8"
               whileHover={{ scale: 1.03, y: -3 }}
               whileTap={{ scale: 0.97 }}
             >
@@ -85,7 +86,7 @@ export default function HeroSection() {
             </motion.a>
             <motion.a
               href="/portfolio"
-              className="inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-white/30 px-6 py-4 text-xs font-bold uppercase tracking-widest text-white backdrop-blur-sm sm:px-8"
+              className="inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-white/55 bg-white/10 px-6 py-4 text-sm font-bold uppercase tracking-[0.08em] text-white backdrop-blur-sm sm:px-8"
               whileHover={{ scale: 1.03, backgroundColor: "rgba(255,255,255,0.08)" }}
               whileTap={{ scale: 0.97 }}
             >
@@ -112,7 +113,7 @@ export default function HeroSection() {
                 >
                   {value}
                 </p>
-                <p className="mt-0.5 text-[0.65rem] font-label uppercase tracking-widest text-white/50 sm:text-xs">
+                <p className="mt-1 text-xs font-label font-semibold uppercase tracking-[0.08em] text-white/80">
                   {label}
                 </p>
               </motion.div>
@@ -127,12 +128,12 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2, duration: 0.7 }}
       >
-        <span className="text-[10px] font-label uppercase tracking-widest text-white/40">Scroll</span>
+        <span className="text-xs font-label font-semibold uppercase tracking-[0.08em] text-white/70">Scroll</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >
-          <span className="material-symbols-outlined text-xl text-white/40">keyboard_double_arrow_down</span>
+          <span className="material-symbols-outlined text-xl text-white/70">keyboard_double_arrow_down</span>
         </motion.div>
       </motion.div>
     </section>

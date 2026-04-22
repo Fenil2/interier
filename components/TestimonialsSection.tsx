@@ -26,8 +26,28 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   const [active, setActive] = useState(0);
+  const [carouselStart, setCarouselStart] = useState(0);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.1 });
+  const visibleTestimonials = [0, 1].map(
+    (offset) => (carouselStart + offset) % testimonials.length
+  );
+
+  const showPrevious = () => {
+    setCarouselStart((current) => {
+      const nextStart = (current - 1 + testimonials.length) % testimonials.length;
+      setActive(nextStart);
+      return nextStart;
+    });
+  };
+
+  const showNext = () => {
+    setCarouselStart((current) => {
+      const nextStart = (current + 1) % testimonials.length;
+      setActive(nextStart);
+      return nextStart;
+    });
+  };
 
   return (
     <section ref={ref} className="py-20 md:py-36 bg-[#f6f3ee] relative overflow-hidden">
@@ -120,36 +140,84 @@ export default function TestimonialsSection() {
           </motion.div>
         </div>
 
-        {/* Navigation dots + mini cards */}
-        <div className="flex gap-4 overflow-x-auto no-scrollbar pb-2">
-          {testimonials.map((t, i) => (
-            <motion.button
-              key={t.id}
-              onClick={() => setActive(i)}
-              className={`min-w-[220px] text-left p-5 rounded-sm border transition-all duration-300 flex-shrink-0 ${
-                i === active
-                  ? "bg-[#131b2e] border-[#e6c275]/30 shadow-xl"
-                  : "bg-white border-[#131b2e]/8 hover:border-[#e6c275]/40"
-              }`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.2 + i * 0.1 }}
-              whileHover={{ y: -2 }}
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <img alt={t.name} src={t.avatar}
-                  className={`w-8 h-8 rounded-full object-cover ring-1 ${i === active ? "ring-[#e6c275]/50" : "ring-[#131b2e]/10"}`}
-                />
-                <div>
-                  <p className={`font-bold text-xs ${i === active ? "text-white" : "text-[#131b2e]"}`}>{t.name}</p>
-                  <p className={`text-[10px] uppercase tracking-widest ${i === active ? "text-white/50" : "text-[#3c475a]"}`}>{t.role}</p>
-                </div>
-              </div>
-              <p className={`text-xs leading-relaxed line-clamp-2 ${i === active ? "text-white/70" : "text-[#3c475a]"}`}>
-                {t.quote}
-              </p>
-            </motion.button>
-          ))}
+        {/* Mini card carousel */}
+        <div className="flex items-center gap-4">
+          <motion.button
+            type="button"
+            onClick={showPrevious}
+            aria-label="Previous testimonial"
+            className="hidden sm:inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#131b2e]/10 bg-white text-[#131b2e] shadow-sm transition-colors hover:border-[#e6c275]/60 hover:text-[#b08a3c]"
+            whileHover={{ x: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+          </motion.button>
+
+          <div className="grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2">
+            {visibleTestimonials.map((testimonialIndex) => {
+              const t = testimonials[testimonialIndex];
+
+              return (
+                <motion.button
+                  key={`${t.id}-${carouselStart}`}
+                  type="button"
+                  onClick={() => setActive(testimonialIndex)}
+                  className={`min-h-[106px] text-left p-5 rounded-sm border transition-all duration-300 ${
+                    testimonialIndex === active
+                      ? "bg-[#131b2e] border-[#e6c275]/30 shadow-xl"
+                      : "bg-white border-[#131b2e]/8 hover:border-[#e6c275]/40"
+                  }`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ delay: 0.2 + testimonialIndex * 0.1 }}
+                  whileHover={{ y: -2 }}
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <img alt={t.name} src={t.avatar}
+                      className={`w-8 h-8 rounded-full object-cover ring-1 ${testimonialIndex === active ? "ring-[#e6c275]/50" : "ring-[#131b2e]/10"}`}
+                    />
+                    <div className="min-w-0">
+                      <p className={`truncate font-bold text-xs ${testimonialIndex === active ? "text-white" : "text-[#131b2e]"}`}>{t.name}</p>
+                      <p className={`truncate text-[10px] uppercase tracking-widest ${testimonialIndex === active ? "text-white/50" : "text-[#3c475a]"}`}>{t.role}</p>
+                    </div>
+                  </div>
+                  <p className={`text-xs leading-relaxed line-clamp-2 ${testimonialIndex === active ? "text-white/70" : "text-[#3c475a]"}`}>
+                    {t.quote}
+                  </p>
+                </motion.button>
+              );
+            })}
+          </div>
+
+          <motion.button
+            type="button"
+            onClick={showNext}
+            aria-label="Next testimonial"
+            className="hidden sm:inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#131b2e]/10 bg-white text-[#131b2e] shadow-sm transition-colors hover:border-[#e6c275]/60 hover:text-[#b08a3c]"
+            whileHover={{ x: 2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </motion.button>
+        </div>
+
+        <div className="mt-4 flex justify-center gap-3 sm:hidden">
+          <button
+            type="button"
+            onClick={showPrevious}
+            aria-label="Previous testimonial"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#131b2e]/10 bg-white text-[#131b2e] shadow-sm"
+          >
+            <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+          </button>
+          <button
+            type="button"
+            onClick={showNext}
+            aria-label="Next testimonial"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#131b2e]/10 bg-white text-[#131b2e] shadow-sm"
+          >
+            <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </button>
         </div>
       </div>
     </section>

@@ -1,7 +1,9 @@
+import FadeIn from "../animations/FadeIn";
+
 export default function FeaturedEditorial() {
   return (
     <section className="px-4 sm:px-8 max-w-[1440px] mx-auto mb-16 md:mb-28">
-      <article className="grid grid-cols-1 overflow-hidden rounded-md border border-[#131b2e]/10 bg-white shadow-sm lg:grid-cols-12">
+      <FadeIn direction="up" className="grid grid-cols-1 overflow-hidden rounded-md border border-[#131b2e]/10 bg-white shadow-sm lg:grid-cols-12">
         <div className="lg:col-span-7">
           <img
             alt="Warm modern living room with refined interior details"
@@ -32,7 +34,7 @@ export default function FeaturedEditorial() {
             <span>Studio Guide</span>
           </div>
         </div>
-      </article>
+      </FadeIn>
     </section>
   );
 }

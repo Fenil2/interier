@@ -18,7 +18,7 @@ export default function StatsSection() {
   return (
     <section ref={ref} className="py-20 md:py-36 bg-[#131b2e] text-white relative overflow-hidden">
       {/* Background grid */}
-      <div className="absolute inset-0 bg-grid-pattern-light pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-pattern-light pointer-events-none opacity-20" />
 
       {/* Animated triangle */}
       <motion.div
@@ -59,14 +59,14 @@ export default function StatsSection() {
               The Standard of{" "}
               <span className="gradient-text-gold italic">Structural Poise</span>
             </h2>
-            <p className="text-[#9aa5b8] text-lg leading-relaxed mb-10">
+            <p className="readable-copy-dark mb-10 max-w-xl">
               We don&apos;t just build structures; we curate legacies. Our
               commitment to uncompromising quality is reflected in every project
               we undertake.
             </p>
             <motion.a
               href="/about"
-              className="inline-flex items-center gap-3 border border-[#e6c275]/40 text-[#e6c275] px-7 py-3.5 rounded-sm font-bold text-xs uppercase tracking-widest"
+              className="inline-flex min-h-12 items-center gap-3 border border-[#e6c275]/70 text-[#f0d48a] px-7 py-3.5 rounded-sm font-bold text-sm uppercase tracking-[0.08em]"
               whileHover={{ backgroundColor: "#e6c275", color: "#131b2e", scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.25 }}
@@ -81,7 +81,7 @@ export default function StatsSection() {
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
-                className="space-y-2 p-6 border border-white/8 rounded-sm relative overflow-hidden group cursor-default"
+                className="space-y-3 p-6 border border-white/15 bg-white/[0.03] rounded-sm relative overflow-hidden group cursor-default"
                 initial={{ opacity: 0, y: 30, scale: 0.95 }}
                 animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -91,11 +91,11 @@ export default function StatsSection() {
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{ background: "radial-gradient(circle at center, rgba(230,194,117,0.07) 0%, transparent 70%)" }}
                 />
-                <p className="text-5xl font-bold text-[#e6c275] relative"
+                <p className="text-5xl font-bold text-[#f0d48a] relative"
                   style={{ fontFamily: "var(--font-noto-serif), serif" }}>
                   <CountUp value={stat.value} duration={2200} />
                 </p>
-                <p className="font-label text-xs uppercase tracking-widest text-white/60 relative">
+                <p className="font-label text-sm font-semibold uppercase tracking-[0.08em] text-white/85 relative">
                   {stat.label}
                 </p>
               </motion.div>

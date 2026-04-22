@@ -1,3 +1,5 @@
+import FadeIn from "../animations/FadeIn";
+
 const testimonials = [
   {
     name: "Marcus Vane",
@@ -52,7 +54,7 @@ function Stars() {
 export default function BentoTestimonialsSection() {
   return (
     <section className="max-w-[1440px] mx-auto px-4 sm:px-8 mb-16 md:mb-28">
-      <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <FadeIn direction="up" className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <span className="eyebrow mb-5">Client Notes</span>
           <h2
@@ -66,12 +68,14 @@ export default function BentoTestimonialsSection() {
           A collection of feedback from homeowners, founders, architects, and
           development teams who trusted us with meaningful spaces.
         </p>
-      </div>
+      </FadeIn>
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {testimonials.map((item) => (
-          <article
+        {testimonials.map((item, index) => (
+          <FadeIn
             key={item.name}
+            direction="up"
+            delay={index * 0.06}
             className="flex min-h-[280px] flex-col justify-between rounded-md border border-[#131b2e]/10 bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-xl"
           >
             <div>
@@ -86,7 +90,7 @@ export default function BentoTestimonialsSection() {
                 {item.role}
               </p>
             </div>
-          </article>
+          </FadeIn>
         ))}
       </div>
     </section>

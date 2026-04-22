@@ -1,3 +1,5 @@
+import FadeIn from "../animations/FadeIn";
+
 const sectors = [
   {
     icon: "home_work",
@@ -21,9 +23,11 @@ export default function StatsSection() {
     <section className="bg-[#131b2e] py-16 md:py-24">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-          {sectors.map((sector) => (
-            <article
+          {sectors.map((sector, index) => (
+            <FadeIn
               key={sector.title}
+              direction="up"
+              delay={index * 0.1}
               className="rounded-md border border-white/10 bg-white/[0.04] p-6 text-white"
             >
               <span className="material-symbols-outlined mb-8 text-3xl text-[#e6c275]">
@@ -38,7 +42,7 @@ export default function StatsSection() {
               <p className="text-sm leading-relaxed text-white/58">
                 {sector.copy}
               </p>
-            </article>
+            </FadeIn>
           ))}
         </div>
       </div>
