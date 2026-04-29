@@ -61,37 +61,42 @@ const serviceIcons: Record<ServiceIcon, ReactNode> = {
 const services = [
   {
     icon: "interior",
-    title: "Interior Design for Homes and Commercial Spaces",
-    description: "Thoughtful interiors planned around comfort, brand identity, workflow, and daily use.",
-    items: ["Home Interiors", "Office Spaces", "Retail & Hospitality"],
+    title: "Interior Design",
+    description:
+      "We create customized interior designs that blend style, comfort, and functionality for residential and commercial spaces.",
+    items: ["Customized Designs", "Residential Spaces", "Commercial Spaces"],
     accent: "from-[#e6c275]/80 to-[#f5d78a]/60",
   },
   {
     icon: "construction",
-    title: "Complete Construction Services",
-    description: "End-to-end construction support with coordinated planning, site execution, and quality control.",
-    items: ["Civil Work", "Site Supervision", "Finishing Works"],
+    title: "Construction Services",
+    description:
+      "We provide complete construction solutions from planning to execution with a focus on quality and durability.",
+    items: ["Planning", "Execution", "Quality and Durability"],
     accent: "from-[#e6c275]/80 to-[#c9a84c]/60",
   },
   {
     icon: "kitchen",
-    title: "Modular Kitchen and Wardrobe Solutions",
-    description: "Space-efficient modular systems designed for durable storage, smooth access, and clean finishes.",
-    items: ["Kitchen Modules", "Wardrobe Units", "Storage Planning"],
+    title: "Modular Solutions",
+    description:
+      "Modern kitchens, wardrobes, and storage solutions designed for efficient and stylish living.",
+    items: ["Modern Kitchens", "Wardrobes", "Storage Solutions"],
     accent: "from-[#f5d78a]/80 to-[#e6c275]/60",
   },
   {
     icon: "renovation",
     title: "Renovation and Remodeling",
-    description: "Focused upgrades that refresh existing spaces while improving layout, materials, and usability.",
-    items: ["Space Upgrades", "Layout Changes", "Material Refresh"],
+    description:
+      "Upgrade your existing space with our renovation services that bring a fresh and modern look.",
+    items: ["Space Upgrades", "Fresh Look", "Modern Updates"],
     accent: "from-[#e6c275]/80 to-[#f5d78a]/60",
   },
   {
     icon: "turnkey",
-    title: "Turnkey Project Execution",
-    description: "A single coordinated process from planning and procurement through final handover.",
-    items: ["Design Coordination", "Vendor Management", "Final Handover"],
+    title: "Turnkey Projects",
+    description:
+      "From concept to completion, we handle everything to deliver a hassle free experience.",
+    items: ["Concept to Completion", "Complete Handling", "Hassle Free Experience"],
     accent: "from-[#f5d78a]/80 to-[#c9a84c]/60",
   },
 ];
@@ -103,34 +108,32 @@ export default function ExpertiseSection() {
   return (
     <section id="services" className="py-16 md:py-24 bg-[#f0ede9] scroll-mt-20">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
-        {/* Header */}
         <div
           ref={headerRef}
           className="mb-12 grid grid-cols-1 items-end gap-6 md:mb-16 md:grid-cols-12"
         >
           <div className="md:col-span-7">
             <FadeIn direction="left">
-              <span className="eyebrow mb-5">Capabilities</span>
+              <span className="eyebrow mb-5">Our Services</span>
               <h2
                 className="text-[2.6rem] md:text-[4rem] leading-tight text-[#131b2e] font-bold tracking-tight"
                 style={{ fontFamily: "var(--font-noto-serif), serif" }}
               >
-                Our Expertise
+                Our Services
               </h2>
             </FadeIn>
           </div>
           <div className="md:col-span-5 md:flex md:justify-end">
             <FadeIn direction="right" delay={0.2}>
               <p className="max-w-md text-[#3c475a] leading-relaxed text-base md:text-lg">
-                Comprehensive design and build solutions tailored for clients
-                across South India — from residential interiors to complete
-                turnkey construction projects.
+                Interior design, construction, modular solutions, renovation,
+                and turnkey project services tailored for stylish, functional,
+                and durable spaces.
               </p>
             </FadeIn>
           </div>
         </div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-6">
           {services.map((service, i) => (
             <FadeIn
@@ -145,7 +148,9 @@ export default function ExpertiseSection() {
                   whileHover={{ y: -6, boxShadow: "0 24px 48px rgba(19,27,46,0.12)" }}
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <div className={`absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r ${service.accent} transition-all duration-500`} />
+                  <div
+                    className={`absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r ${service.accent} transition-all duration-500`}
+                  />
 
                   <div className="mb-10 flex items-center justify-between gap-5">
                     <motion.span
@@ -199,7 +204,6 @@ export default function ExpertiseSection() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
         <FadeIn direction="up" delay={0.5} className="mt-12 flex items-center justify-center">
           <motion.a
             href="#contact"

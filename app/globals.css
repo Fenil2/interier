@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brand-navy: #012c3d;
+  --brand-cyan: #01c1ff;
+  --brand-yellow: #ffc309;
+  --brand-orange: #fa693a;
+  --brand-teal: #18d4cf;
+  --brand-cream: #fcf9f4;
+}
+
 /* ─────────────────────────────────────────────────────────────
    BASE
 ───────────────────────────────────────────────────────────── */
@@ -12,7 +21,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: none; /* custom cursor */
-    color: #1c2535;
+    color: var(--brand-navy);
   }
   p,
   li,
@@ -28,7 +37,7 @@
     font: inherit;
   }
   *:focus-visible {
-    outline: 2px solid #e6c275;
+    outline: 2px solid var(--brand-cyan);
     outline-offset: 2px;
   }
 }
@@ -40,7 +49,7 @@
   position: fixed;
   top: 0; left: 0;
   width: 12px; height: 12px;
-  background: #e6c275;
+  background: var(--brand-yellow);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -52,7 +61,7 @@
   position: fixed;
   top: 0; left: 0;
   width: 36px; height: 36px;
-  border: 1.5px solid rgba(230,194,117,0.6);
+  border: 1.5px solid rgba(1, 193, 255, 0.45);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -107,8 +116,8 @@ body:has(button:hover) #custom-cursor-ring {
   50%       { transform: translateY(-20px) rotate(2deg); }
 }
 @keyframes pulseGold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(230,194,117,0); }
-  50%       { box-shadow: 0 0 32px 8px rgba(230,194,117,0.18); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,195,9,0); }
+  50%       { box-shadow: 0 0 32px 8px rgba(255,195,9,0.18); }
 }
 @keyframes shimmer {
   0%   { background-position: -200% 0; }
@@ -140,8 +149,8 @@ body:has(button:hover) #custom-cursor-ring {
   to   { transform: translateY(100vh); }
 }
 @keyframes borderGlow {
-  0%, 100% { border-color: rgba(230,194,117,0.2); }
-  50%       { border-color: rgba(230,194,117,0.7); }
+  0%, 100% { border-color: rgba(1,193,255,0.2); }
+  50%       { border-color: rgba(1,193,255,0.7); }
 }
 @keyframes textSlideUp {
   from { opacity: 0; transform: translateY(100%); }
@@ -200,7 +209,7 @@ body:has(button:hover) #custom-cursor-ring {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(230,194,117,0.15) 50%,
+    rgba(1,193,255,0.14) 50%,
     transparent 100%
   );
   background-size: 200% 100%;
@@ -217,16 +226,16 @@ body:has(button:hover) #custom-cursor-ring {
   border: 1px solid rgba(255,255,255,0.1);
 }
 .glass-dark {
-  background: rgba(19,27,46,0.7);
+  background: rgba(1,44,61,0.74);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(230,194,117,0.12);
+  border: 1px solid rgba(1,193,255,0.18);
 }
 .glass-gold {
-  background: rgba(230,194,117,0.08);
+  background: rgba(255,195,9,0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(230,194,117,0.2);
+  border: 1px solid rgba(255,195,9,0.24);
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -245,13 +254,13 @@ body:has(button:hover) #custom-cursor-ring {
    GRADIENT TEXT
 ───────────────────────────────────────────────────────────── */
 .gradient-text-gold {
-  background: linear-gradient(135deg, #e6c275 0%, #f5d78a 40%, #c9a84c 100%);
+  background: linear-gradient(135deg, var(--brand-cyan) 0%, var(--brand-teal) 40%, var(--brand-yellow) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .gradient-text-animate {
-  background: linear-gradient(90deg, #e6c275, #f5d78a, #e6c275, #c9a84c);
+  background: linear-gradient(90deg, var(--brand-cyan), var(--brand-teal), var(--brand-yellow), var(--brand-orange));
   background-size: 300% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -285,7 +294,7 @@ body:has(button:hover) #custom-cursor-ring {
 .section-line {
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #e6c275, transparent);
+  background: linear-gradient(90deg, var(--brand-cyan), transparent);
   animation: drawLine 1.4s ease 0.3s forwards;
 }
 
@@ -294,19 +303,19 @@ body:has(button:hover) #custom-cursor-ring {
 ───────────────────────────────────────────────────────────── */
 @layer utilities {
   .bg-dot-pattern {
-    background-image: radial-gradient(circle, rgba(19,27,46,0.07) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(1,44,61,0.08) 1px, transparent 1px);
     background-size: 28px 28px;
   }
   .bg-grid-pattern {
     background-image:
-      linear-gradient(rgba(19,27,46,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(19,27,46,0.04) 1px, transparent 1px);
+      linear-gradient(rgba(1,44,61,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(1,44,61,0.05) 1px, transparent 1px);
     background-size: 48px 48px;
   }
   .bg-diagonal-pattern {
     background-image: repeating-linear-gradient(
       -45deg, transparent, transparent 20px,
-      rgba(19,27,46,0.025) 20px, rgba(19,27,46,0.025) 21px
+      rgba(1,44,61,0.03) 20px, rgba(1,44,61,0.03) 21px
     );
   }
   .bg-dot-pattern-light {
@@ -331,9 +340,9 @@ body:has(button:hover) #custom-cursor-ring {
 
 /* Custom scrollbar for main page */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #131b2e; }
-::-webkit-scrollbar-thumb { background: #e6c275; border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: #f0d48a; }
+::-webkit-scrollbar-track { background: var(--brand-navy); }
+::-webkit-scrollbar-thumb { background: var(--brand-cyan); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--brand-orange); }
 
 /* ─────────────────────────────────────────────────────────────
    WRITING MODES
@@ -443,7 +452,7 @@ body:has(button:hover) #custom-cursor-ring {
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: -0.03em;
-    color: #131b2e;
+    color: var(--brand-navy);
   }
   .page-hero-copy {
     max-width: 42rem;
@@ -452,7 +461,7 @@ body:has(button:hover) #custom-cursor-ring {
     line-height: 1.75;
   }
   .page-hero-aside {
-    border-top: 1px solid rgba(230, 194, 117, 0.35);
+    border-top: 1px solid rgba(1, 193, 255, 0.35);
     padding-top: 1.5rem;
   }
   @media (min-width: 640px) {
@@ -466,7 +475,7 @@ body:has(button:hover) #custom-cursor-ring {
     }
     .page-hero-aside {
       border-top: 0;
-      border-left: 1px solid rgba(230, 194, 117, 0.35);
+      border-left: 1px solid rgba(1, 193, 255, 0.35);
       padding-top: 0;
       padding-left: 1.75rem;
     }
@@ -490,15 +499,15 @@ body:has(button:hover) #custom-cursor-ring {
     letter-spacing: 0.14em;
     line-height: 1;
     text-transform: uppercase;
-    color: #9e803a;
+    color: var(--brand-orange);
   }
   .eyebrow::before {
     content: '';
     display: block;
     width: 0.45rem;
     height: 0.45rem;
-    border: 1.5px solid #e6c275;
-    background: rgba(230, 194, 117, 0.18);
+    border: 1.5px solid var(--brand-cyan);
+    background: rgba(1, 193, 255, 0.16);
     flex-shrink: 0;
     transform: rotate(45deg);
     animation: fadeScale 0.55s ease 0.15s both;
@@ -533,10 +542,10 @@ body:has(button:hover) #custom-cursor-ring {
 .hero-gradient {
   background: linear-gradient(
     135deg,
-    rgba(19,27,46,0.95) 0%,
-    rgba(19,27,46,0.80) 40%,
-    rgba(19,27,46,0.40) 70%,
-    rgba(19,27,46,0.10) 100%
+    rgba(1,44,61,0.94) 0%,
+    rgba(1,44,61,0.82) 40%,
+    rgba(1,44,61,0.46) 70%,
+    rgba(1,44,61,0.12) 100%
   );
 }
 
@@ -563,7 +572,7 @@ body:has(button:hover) #custom-cursor-ring {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, #e6c275, transparent, #e6c275);
+  background: linear-gradient(135deg, var(--brand-cyan), transparent, var(--brand-orange));
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: -1;
@@ -589,7 +598,7 @@ body:has(button:hover) #custom-cursor-ring {
 ───────────────────────────────────────────────────────────── */
 #scroll-progress {
   position: fixed; top: 0; left: 0; height: 3px; z-index: 9999;
-  background: linear-gradient(90deg, #e6c275, #f5d78a);
+  background: linear-gradient(90deg, var(--brand-cyan), var(--brand-yellow));
   transform-origin: left;
   transition: width 0.1s linear;
 }

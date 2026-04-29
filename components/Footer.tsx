@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -31,14 +33,14 @@ export default function Footer() {
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <footer ref={ref} className="bg-[#0d1420] w-full relative overflow-hidden">
+    <footer ref={ref} className="bg-[#012c3d] w-full relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern-light pointer-events-none opacity-20" />
 
       <motion.div
         className="absolute top-0 left-0 h-[3px]"
         style={{
           background:
-            "linear-gradient(90deg, #e6c275, rgba(230,194,117,0.3), transparent)",
+            "linear-gradient(90deg, #01c1ff, rgba(1,193,255,0.35), transparent)",
         }}
         initial={{ width: 0 }}
         animate={inView ? { width: "60%" } : {}}
@@ -49,7 +51,7 @@ export default function Footer() {
         className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(230,194,117,0.04) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(24,212,207,0.08) 0%, transparent 70%)",
         }}
         animate={{ scale: [1, 1.4, 1] }}
         transition={{ duration: 10, repeat: Infinity }}
@@ -65,20 +67,20 @@ export default function Footer() {
           <a
             href="#"
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            className="flex items-center gap-2.5 group"
+            className="flex items-center group"
           >
-            <motion.span
-              className="material-symbols-outlined text-[#e6c275] text-[20px]"
-              whileHover={{ rotate: 15, scale: 1.1 }}
+            <motion.div
+              whileHover={{ scale: 1.03, y: -1 }}
+              className="relative h-14 w-[160px]"
             >
-              architecture
-            </motion.span>
-            <span
-              className="text-xl uppercase tracking-[0.1em] text-white font-bold"
-              style={{ fontFamily: "var(--font-noto-serif), serif" }}
-            >
-              FOURWALLS
-            </span>
+              <Image
+                src="/flourlogo.jpeg"
+                alt="Flour Logo"
+                fill
+                className="object-contain"
+                sizes="160px"
+              />
+            </motion.div>
           </a>
           <p className="text-[#d0d8e6] text-sm leading-relaxed max-w-xs">
             Fourwalls Interiors &amp; Constructions delivers high quality interior
@@ -93,15 +95,15 @@ export default function Footer() {
                 aria-label={label}
                 className="w-9 h-9 flex items-center justify-center rounded-sm bg-white/4 border border-white/15 group"
                 whileHover={{
-                  backgroundColor: "#e6c275",
-                  borderColor: "#e6c275",
+                  backgroundColor: "#01c1ff",
+                  borderColor: "#01c1ff",
                   y: -3,
                 }}
                 initial={{ opacity: 0, y: 10 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.3 + i * 0.1 }}
               >
-                <span className="material-symbols-outlined text-[18px] text-white/80 group-hover:text-[#131b2e] transition-colors">
+                <span className="material-symbols-outlined text-[18px] text-white/80 group-hover:text-[#012c3d] transition-colors">
                   {icon}
                 </span>
               </motion.a>
@@ -129,9 +131,9 @@ export default function Footer() {
                 <a
                   href={href}
                   onClick={(e) => { e.preventDefault(); scrollTo(href); }}
-                  className="text-[#d0d8e6] hover:text-[#f0d48a] transition-colors text-sm font-medium flex items-center gap-2 group"
+                  className="text-[#d0d8e6] hover:text-[#01c1ff] transition-colors text-sm font-medium flex items-center gap-2 group"
                 >
-                  <motion.span className="w-0 h-px bg-[#e6c275] transition-all duration-300 group-hover:w-4" />
+                  <motion.span className="w-0 h-px bg-[#01c1ff] transition-all duration-300 group-hover:w-4" />
                   {label}
                 </a>
               </motion.div>
@@ -159,9 +161,9 @@ export default function Footer() {
                 <a
                   href={href}
                   onClick={(e) => { e.preventDefault(); scrollTo(href); }}
-                  className="text-[#d0d8e6] hover:text-[#f0d48a] transition-colors text-sm font-medium flex items-center gap-2 group"
+                  className="text-[#d0d8e6] hover:text-[#01c1ff] transition-colors text-sm font-medium flex items-center gap-2 group"
                 >
-                  <motion.span className="w-0 h-px bg-[#e6c275] transition-all duration-300 group-hover:w-4" />
+                  <motion.span className="w-0 h-px bg-[#01c1ff] transition-all duration-300 group-hover:w-4" />
                   {label}
                 </a>
               </motion.div>
@@ -170,12 +172,11 @@ export default function Footer() {
 
           <div className="pt-4 flex flex-col gap-3">
             {[
-              { icon: "call",          text: "+91 98765 43210" },
-              { icon: "mail",          text: "info@fourwalls.in" },
-              { icon: "location_on",   text: "Chennai, Tamil Nadu" },
+              { icon: "call",          text: "+91 99940 95771" },
+              { icon: "location_on",   text: "Isha Complex, 2/801, Mambakkam - Medavakkam Main Rd, near to Sbioa Unity Enclave, Mambakkam, Tamil Nadu 600127" },
             ].map(({ icon, text }) => (
               <div key={icon} className="flex items-center gap-3 text-[#d0d8e6]">
-                <span className="material-symbols-outlined text-[#e6c275] text-[16px]">
+                <span className="material-symbols-outlined text-[#ffc309] text-[16px]">
                   {icon}
                 </span>
                 <span className="text-sm">{text}</span>
@@ -197,14 +198,14 @@ export default function Footer() {
             Subscribe for the latest design trends, project reveals, and construction
             insights from our team.
           </p>
-          <div className="flex items-center border-b-2 border-white/25 py-2 focus-within:border-[#e6c275] transition-colors duration-300">
+          <div className="flex items-center border-b-2 border-white/25 py-2 focus-within:border-[#01c1ff] transition-colors duration-300">
             <input
               type="email"
               placeholder="your@email.com"
               className="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-white/50 text-white outline-none"
             />
             <motion.button
-              className="material-symbols-outlined text-lg text-white/80 hover:text-[#e6c275] transition-colors ml-2"
+              className="material-symbols-outlined text-lg text-white/80 hover:text-[#01c1ff] transition-colors ml-2"
               whileHover={{ x: 3 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Subscribe"
@@ -214,8 +215,7 @@ export default function Footer() {
           </div>
           <div className="pt-2">
             <p className="text-[#d0d8e6] text-xs leading-relaxed">
-              Service areas: Chennai, Coimbatore, Bangalore, Hyderabad &amp; across
-              South India.
+              Visit us at our Mambakkam studio for interior and construction consultations.
             </p>
           </div>
         </motion.div>
@@ -231,15 +231,18 @@ export default function Footer() {
           &copy; 2025 Fourwalls Interiors &amp; Constructions &middot; South India
         </p>
         <div className="flex gap-6 text-xs uppercase tracking-[0.08em] font-bold">
-          {["Privacy Policy", "Terms of Service"].map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="text-white/70 hover:text-[#e6c275] transition-colors duration-300"
-            >
-              {item}
-            </a>
-          ))}
+          <Link
+            href="/privacy-policy"
+            className="text-white/70 hover:text-[#01c1ff] transition-colors duration-300"
+          >
+            Privacy Policy
+          </Link>
+          <a
+            href="#"
+            className="text-white/70 hover:text-[#01c1ff] transition-colors duration-300"
+          >
+            Terms of Service
+          </a>
         </div>
       </motion.div>
     </footer>

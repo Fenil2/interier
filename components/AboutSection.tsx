@@ -88,11 +88,9 @@ export default function AboutSection() {
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.7, delay: 0.5 }}
             >
-              At Fourwalls Interiors &amp; Constructions, we specialize in creating
-              functional, elegant, and long-lasting spaces. With over 500 plus
-              successfully completed projects, we have built a strong reputation
-              for delivering quality interiors and construction solutions across
-              South India.
+              Fourwalls Interiors &amp; Constructions is dedicated to designing
+              and building spaces that reflect both functionality and aesthetic
+              appeal.
             </motion.p>
 
             <motion.p
@@ -101,10 +99,12 @@ export default function AboutSection() {
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.7, delay: 0.65 }}
             >
-              Fourwalls Interiors &amp; Constructions is dedicated to designing and
-              building spaces that reflect both functionality and aesthetic appeal.
-              We believe in delivering not just spaces, but experiences that
-              enhance the way people live and work.
+              With over 500 plus completed projects, we have successfully
+              delivered interior and construction solutions across multiple
+              cities in South India. Our team combines creativity, technical
+              expertise, and attention to detail to ensure every project meets
+              high quality standards. We believe in delivering not just spaces,
+              but experiences that enhance the way people live and work.
             </motion.p>
 
             <motion.div
