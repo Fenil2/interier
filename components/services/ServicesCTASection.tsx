@@ -1,6 +1,6 @@
 export default function ServicesCTASection() {
   return (
-    <section className="py-24 md:py-32 px-4 sm:px-8 bg-[#f0ede9] relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 sm:px-8 bg-[#f0ede9] relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
       <div className="relative max-w-4xl mx-auto text-center">
         <div className="w-14 h-14 flex items-center justify-center bg-[#131b2e] rounded-sm mx-auto mb-8">

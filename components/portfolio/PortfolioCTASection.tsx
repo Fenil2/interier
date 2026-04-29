@@ -2,7 +2,7 @@ import FadeIn from "../animations/FadeIn";
 
 export default function PortfolioCTASection() {
   return (
-    <section className="mt-16 md:mt-24 px-4 sm:px-8 max-w-[1440px] mx-auto mb-20">
+    <section className="mt-12 md:mt-16 px-4 sm:px-8 max-w-[1440px] mx-auto mb-16">
       <FadeIn direction="up" className="bg-[#131b2e] p-8 md:p-16 lg:p-20 flex flex-col md:flex-row justify-between items-center gap-10 rounded-sm relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-grid-pattern-light pointer-events-none" />

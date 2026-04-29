@@ -20,7 +20,7 @@ const sectors = [
 
 export default function StatsSection() {
   return (
-    <section className="bg-[#131b2e] py-16 md:py-24">
+    <section className="bg-[#131b2e] py-14 md:py-20">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
           {sectors.map((sector, index) => (

@@ -31,7 +31,7 @@ const materials = [
 
 export default function MaterialitySection() {
   return (
-    <section className="py-16 md:py-24 bg-surface">
+    <section className="py-14 md:py-20 bg-surface">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">

@@ -2,7 +2,7 @@ import FadeIn from "../animations/FadeIn";
 
 export default function NewsletterSection() {
   return (
-    <section className="bg-[#131b2e] py-20 md:py-28">
+    <section className="bg-[#131b2e] py-16 md:py-24">
       <div className="px-4 sm:px-8 max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-12">
           <FadeIn direction="left" className="md:col-span-7">

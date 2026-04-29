@@ -7,7 +7,7 @@ const stats = [
 
 export default function AboutStatsSection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-8 lg:px-24 bg-[#131b2e] relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 sm:px-8 lg:px-24 bg-[#131b2e] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-dot-pattern-light pointer-events-none opacity-70" />
       <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#e6c275]/80 to-transparent" />

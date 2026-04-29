@@ -1,6 +1,6 @@
 export default function DifferenceCTASection() {
   return (
-    <section className="py-24 md:py-36 px-4 sm:px-8 bg-[#131b2e] relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 sm:px-8 bg-[#131b2e] relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern-light pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#e6c275]/80 to-transparent" />
       {/* Decorative corners */}

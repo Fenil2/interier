@@ -1,7 +1,7 @@
 export default function ClientsFooter() {
   return (
     <footer className="bg-[#f6f3ee] border-t border-outline-variant/10">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-24 max-w-[1440px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-[1440px] mx-auto">
         {/* Brand */}
         <div className="md:col-span-1">
           <span

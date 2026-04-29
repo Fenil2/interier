@@ -1,6 +1,6 @@
 export default function TimelineSection() {
   return (
-    <section className="py-16 md:py-32 px-4 sm:px-8">
+    <section className="py-14 md:py-24 px-4 sm:px-8">
       <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row gap-24">
         {/* Sticky heading */}
         <div className="md:w-1/3">

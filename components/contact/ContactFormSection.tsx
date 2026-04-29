@@ -20,7 +20,7 @@ export default function ContactFormSection() {
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section ref={ref} className="bg-[#f0ede9] py-24 relative overflow-hidden">
+    <section ref={ref} className="bg-[#f0ede9] py-16 md:py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
 
       {/* Ambient glow */}

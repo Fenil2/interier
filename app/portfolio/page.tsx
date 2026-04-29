@@ -12,7 +12,7 @@ export default function PortfolioPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-32 pb-24">
+      <main className="pt-28 pb-16">
         <PortfolioHero />
         <PortfolioBentoGrid />
         <PortfolioCTASection />

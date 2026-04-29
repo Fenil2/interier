@@ -1,6 +1,6 @@
 export default function RenovationSection() {
   return (
-    <section className="py-24 px-8 max-w-[1440px] mx-auto">
+    <section className="py-16 px-8 max-w-[1440px] mx-auto">
       <div className="relative rounded-md overflow-hidden bg-on-primary-fixed min-h-[400px] md:h-[600px] flex items-center">
         {/* Background image */}
         <div className="absolute inset-0 overflow-hidden">

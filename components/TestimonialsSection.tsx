@@ -6,20 +6,20 @@ import FadeIn from "./animations/FadeIn";
 const testimonials = [
   {
     id: 1,
-    quote: "Aurelian didn't just build us a house; they crafted a living sculpture. Their attention to the interplay of light and material is simply unmatched in the industry.",
-    name: "David Thorne", role: "Founder, Thorne Ventures",
+    quote: "Fourwalls transformed our home into exactly what we envisioned. Their team listened carefully, delivered on time, and the quality of work exceeded our expectations completely.",
+    name: "Rajesh Kumar", role: "Homeowner, Chennai",
     avatar: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 2,
-    quote: "The technical precision they brought to our commercial headquarters was astounding. They managed to make 50,000 square feet feel intimate and grounded.",
-    name: "Sarah Jenkins", role: "Director, Alt-Design Group",
+    quote: "The commercial interior they designed for our office is stunning. Professional execution, transparent pricing, and zero compromise on quality. Highly recommended across South India.",
+    name: "Priya Nair", role: "Business Owner, Coimbatore",
     avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 3,
-    quote: "Every conversation with their team felt like an exploration of possibilities. They have a rare ability to listen to what isn't being said and design for it.",
-    name: "Julian Marcus", role: "Private Collector",
+    quote: "From modular kitchen to complete renovation, Fourwalls handled everything seamlessly. Their turnkey approach made the entire process stress-free and the results are beautiful.",
+    name: "Suresh Babu", role: "Property Developer, Bangalore",
     avatar: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
 ];
@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section ref={ref} className="py-20 md:py-36 bg-[#f6f3ee] relative overflow-hidden">
+    <section id="testimonials" ref={ref} className="py-16 md:py-24 bg-[#f6f3ee] relative overflow-hidden scroll-mt-20">
       <div className="absolute inset-0 bg-dot-pattern pointer-events-none opacity-60" />
 
       {/* Decorative background quote */}
@@ -67,17 +67,25 @@ export default function TestimonialsSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <FadeIn direction="up">
-            <span className="eyebrow mb-5 block">Kind Words</span>
+            <span className="eyebrow mb-5 block">What Our Clients Say</span>
             <h2 className="text-4xl md:text-5xl text-[#131b2e] font-bold tracking-tight"
               style={{ fontFamily: "var(--font-noto-serif), serif" }}>
               Client Experiences
             </h2>
+            <p className="mt-4 max-w-xl text-[#3c475a] leading-relaxed text-base">
+              Our clients are at the heart of everything we do. Their satisfaction and trust motivate us to deliver better with every project.
+            </p>
           </FadeIn>
           <FadeIn direction="right" delay={0.2}>
-            <motion.a href="/clients"
+            <motion.a
+              href="#contact"
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="inline-flex items-center gap-3 text-[#3c475a] font-bold uppercase tracking-widest text-xs hover:text-[#e6c275] transition-colors shrink-0 group"
               whileHover={{ x: 4 }}>
-              All Testimonials
+              Start Your Project
               <span className="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
             </motion.a>
           </FadeIn>

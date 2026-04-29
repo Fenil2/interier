@@ -4,9 +4,9 @@ import { useRef } from "react";
 import RevealText from "./animations/RevealText";
 
 const heroStats = [
-  { value: "150+", label: "Projects" },
-  { value: "20+", label: "Years" },
-  { value: "98%", label: "Retention" },
+  { value: "500+", label: "Projects" },
+  { value: "South India", label: "Presence" },
+  { value: "100%", label: "Turnkey" },
 ];
 
 export default function HeroSection() {
@@ -18,12 +18,13 @@ export default function HeroSection() {
 
   return (
     <section
+      id="home"
       ref={containerRef}
-      className="relative min-h-[100svh] w-full flex items-center overflow-hidden py-28 sm:py-32 lg:py-36"
+      className="relative min-h-[100svh] w-full flex items-center overflow-hidden py-24 sm:py-28 lg:py-32"
     >
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
         <img
-          alt="Architectural Masterpiece"
+          alt="Fourwalls Interiors"
           src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=1600"
           className="h-[115%] w-full object-cover animate-ken-burns"
           style={{ transformOrigin: "center" }}
@@ -36,14 +37,14 @@ export default function HeroSection() {
         className="relative z-10 mx-auto w-full max-w-[1440px] px-4 sm:px-8 lg:px-24"
         style={{ y: textY, opacity }}
       >
-        <div className="max-w-[48rem]">
+        <div className="max-w-[52rem]">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mb-6"
           >
-            <span className="eyebrow">Structural Poise &amp; Soul</span>
+            <span className="eyebrow">Interiors &amp; Constructions · South India</span>
           </motion.div>
 
           <div className="mb-7 sm:mb-8">
@@ -57,13 +58,14 @@ export default function HeroSection() {
           </div>
 
           <motion.p
-            className="mb-8 max-w-xl text-base leading-relaxed text-[#e2e8f2] sm:mb-10 sm:text-lg md:text-xl"
+            className="mb-8 max-w-2xl text-base leading-relaxed text-[#e2e8f2] sm:mb-10 sm:text-lg md:text-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
           >
-            Crafting spaces that resonate through precision engineering and
-            intentional architectural soul.
+            Fourwalls Interiors &amp; Constructions brings your dream spaces to life
+            with expert interior design and reliable construction solutions across
+            South India.
           </motion.p>
 
           <motion.div
@@ -73,24 +75,32 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 1.3 }}
           >
             <motion.a
-              href="/contact"
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="group relative inline-flex min-h-12 items-center justify-center gap-3 overflow-hidden rounded-sm bg-[#e6c275] px-6 py-4 text-sm font-bold uppercase tracking-[0.08em] text-[#131b2e] shadow-xl sm:px-8"
               whileHover={{ scale: 1.03, y: -3 }}
               whileTap={{ scale: 0.97 }}
             >
               <span className="absolute inset-0 shimmer opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <span className="relative">Start Your Journey</span>
+              <span className="relative">Get Free Consultation</span>
               <span className="material-symbols-outlined relative text-[18px] transition-transform duration-300 group-hover:translate-x-1">
                 arrow_forward
               </span>
             </motion.a>
             <motion.a
-              href="/portfolio"
+              href="#projects"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-white/55 bg-white/10 px-6 py-4 text-sm font-bold uppercase tracking-[0.08em] text-white backdrop-blur-sm sm:px-8"
               whileHover={{ scale: 1.03, backgroundColor: "rgba(255,255,255,0.08)" }}
               whileTap={{ scale: 0.97 }}
             >
-              View Portfolio
+              View Our Projects
             </motion.a>
           </motion.div>
 

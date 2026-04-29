@@ -5,9 +5,9 @@ import FadeIn from "./animations/FadeIn";
 import CountUp from "./animations/CountUp";
 
 const miniStats = [
-  { value: "150+", label: "Projects" },
-  { value: "12",   label: "Awards" },
-  { value: "04",   label: "Offices" },
+  { value: "500+", label: "Projects" },
+  { value: "5+",   label: "Cities" },
+  { value: "100%", label: "Turnkey" },
 ];
 
 export default function AboutSection() {
@@ -15,11 +15,13 @@ export default function AboutSection() {
   const inView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-36 bg-surface relative overflow-hidden">
-      {/* Background dot pattern */}
+    <section
+      id="about"
+      ref={sectionRef}
+      className="py-16 md:py-24 bg-surface relative overflow-hidden scroll-mt-20"
+    >
       <div className="absolute inset-0 bg-dot-pattern pointer-events-none" />
 
-      {/* Animated ambient glow */}
       <motion.div
         className="absolute -right-32 top-1/4 w-96 h-96 rounded-full pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(230,194,117,0.06) 0%, transparent 70%)" }}
@@ -30,9 +32,7 @@ export default function AboutSection() {
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
-          {/* ── Image column ──────────────────────────── */}
           <FadeIn direction="left" className="lg:col-span-7 relative group">
-            {/* Gold accent line — animated draw */}
             <motion.div
               className="absolute -top-6 left-0 h-[3px] bg-[#e6c275] rounded-full origin-left"
               initial={{ scaleX: 0 }}
@@ -43,7 +43,7 @@ export default function AboutSection() {
 
             <div className="aspect-[4/3] overflow-hidden rounded-sm shadow-2xl">
               <motion.img
-                alt="Building Spaces"
+                alt="Building Spaces That Inspire"
                 src="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.06 }}
@@ -51,7 +51,6 @@ export default function AboutSection() {
               />
             </div>
 
-            {/* Floating stat card */}
             <motion.div
               className="absolute -bottom-10 -right-6 md:-right-10 hidden md:block w-60 h-60 bg-[#131b2e] p-8 shadow-2xl"
               initial={{ opacity: 0, scale: 0.7, rotate: -4 }}
@@ -61,17 +60,16 @@ export default function AboutSection() {
               <div className="w-8 h-[2px] bg-[#e6c275] mb-4" />
               <p className="text-4xl font-bold text-[#e6c275] italic"
                 style={{ fontFamily: "var(--font-noto-serif), serif" }}>
-                <CountUp value="20+" />
+                <CountUp value="500+" />
               </p>
               <p className="font-label text-xs uppercase tracking-widest mt-3 text-white/70 leading-relaxed">
-                Years of Heritage in Construction Excellence
+                Successfully Completed Projects Across South India
               </p>
             </motion.div>
           </FadeIn>
 
-          {/* ── Text column ───────────────────────────── */}
           <FadeIn direction="right" delay={0.2} className="lg:col-span-5 space-y-7">
-            <span className="eyebrow">Our Philosophy</span>
+            <span className="eyebrow">About Us</span>
 
             <motion.h2
               className="text-4xl md:text-5xl text-[#131b2e] font-bold leading-tight tracking-tight"
@@ -90,10 +88,11 @@ export default function AboutSection() {
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.7, delay: 0.5 }}
             >
-              Architecture is more than just walls and foundations; it&apos;s
-              the physical manifestation of a lifestyle. At Aurelian, we merge
-              technical precision with aesthetic soul to create environments that
-              breathe.
+              At Fourwalls Interiors &amp; Constructions, we specialize in creating
+              functional, elegant, and long-lasting spaces. With over 500 plus
+              successfully completed projects, we have built a strong reputation
+              for delivering quality interiors and construction solutions across
+              South India.
             </motion.p>
 
             <motion.p
@@ -102,12 +101,12 @@ export default function AboutSection() {
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.7, delay: 0.65 }}
             >
-              Our process is rooted in &quot;The Structural Poise&quot;—a
-              commitment to ensuring every design element serves a functional and
-              emotional purpose.
+              Fourwalls Interiors &amp; Constructions is dedicated to designing and
+              building spaces that reflect both functionality and aesthetic appeal.
+              We believe in delivering not just spaces, but experiences that
+              enhance the way people live and work.
             </motion.p>
 
-            {/* Mini stats */}
             <motion.div
               className="flex gap-8 pt-4 border-t border-[#131b2e]/8"
               initial={{ opacity: 0, y: 16 }}
@@ -139,11 +138,15 @@ export default function AboutSection() {
               transition={{ delay: 1 }}
             >
               <motion.a
-                href="/about"
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="inline-flex items-center gap-4 text-[#131b2e] font-bold uppercase tracking-widest text-xs group"
                 whileHover={{ x: 4 }}
               >
-                Our Philosophy
+                Get In Touch
                 <motion.span
                   className="h-px bg-[#e6c275] origin-left"
                   initial={{ width: "3rem" }}

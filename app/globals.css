@@ -426,7 +426,7 @@ body:has(button:hover) #custom-cursor-ring {
   .page-hero {
     width: min(100% - 2rem, 1440px);
     margin-inline: auto;
-    margin-bottom: clamp(4rem, 8vw, 8rem);
+    margin-bottom: clamp(3rem, 6vw, 5.5rem);
   }
   .page-hero-grid {
     display: grid;

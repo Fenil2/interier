@@ -16,7 +16,7 @@ export default function StatsSection() {
   const inView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section ref={ref} className="py-20 md:py-36 bg-[#131b2e] text-white relative overflow-hidden">
+    <section ref={ref} className="py-16 md:py-24 bg-[#131b2e] text-white relative overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 bg-grid-pattern-light pointer-events-none opacity-20" />
 

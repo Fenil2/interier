@@ -59,7 +59,7 @@ const posts = [
 
 export default function BentoInsightsSection() {
   return (
-    <section className="bg-surface-container-low py-16 md:py-24">
+    <section className="bg-surface-container-low py-14 md:py-20">
       <div className="px-4 sm:px-8 max-w-[1440px] mx-auto">
         <FadeIn direction="up" className="mb-12 flex flex-col gap-4 md:mb-16 md:flex-row md:items-end md:justify-between">
           <div>

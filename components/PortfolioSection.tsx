@@ -40,26 +40,34 @@ export default function PortfolioSection() {
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section className="py-20 md:py-36 bg-white relative overflow-hidden">
+    <section id="projects" className="py-16 md:py-24 bg-white relative overflow-hidden scroll-mt-20">
       <div className="absolute inset-0 bg-diagonal-pattern pointer-events-none" />
 
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 gap-6">
           <FadeIn direction="up">
-            <span className="eyebrow mb-5 block">Selected Works</span>
+            <span className="eyebrow mb-5 block">Our Portfolio</span>
             <h2 className="text-4xl md:text-5xl text-[#131b2e] font-bold tracking-tight"
               style={{ fontFamily: "var(--font-noto-serif), serif" }}>
               Our Recent Works
             </h2>
+            <p className="mt-4 max-w-xl text-[#3c475a] leading-relaxed text-base md:text-lg">
+              Explore our portfolio of thoughtfully designed interiors and well
+              executed construction projects tailored to meet every client&apos;s needs.
+            </p>
           </FadeIn>
           <FadeIn direction="right" delay={0.2}>
             <motion.a
-              href="/portfolio"
+              href="#contact"
+              onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="inline-flex items-center gap-3 text-[#131b2e] font-bold uppercase tracking-widest text-xs border-b border-[#e6c275] pb-1 shrink-0 group"
               whileHover={{ x: 4 }}
             >
-              Explore Full Gallery
+              View All Projects
               <span className="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
             </motion.a>
           </FadeIn>

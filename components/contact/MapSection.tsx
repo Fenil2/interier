@@ -2,7 +2,7 @@ import FadeIn from "../animations/FadeIn";
 
 export default function MapSection() {
   return (
-    <section className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 py-16 md:py-24">
+    <section className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 py-12 md:py-16">
       <FadeIn direction="up" className="h-[240px] md:h-[400px] w-full rounded-md overflow-hidden relative shadow-lg">
         <img
           src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1800"

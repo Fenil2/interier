@@ -1,6 +1,6 @@
 export default function ServicesBentoGrid() {
   return (
-    <section className="px-4 sm:px-8 py-16 md:py-24 bg-surface-container-low">
+    <section className="px-4 sm:px-8 py-14 md:py-20 bg-surface-container-low">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 

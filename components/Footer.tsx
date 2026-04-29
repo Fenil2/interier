@@ -1,20 +1,30 @@
 "use client";
-import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const companyLinks = [
-  { label: "The Gallery", href: "/portfolio" },
-  { label: "Design Philosophy", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Blog", href: "/blog" },
+  { label: "About Us",        href: "#about" },
+  { label: "Our Services",    href: "#services" },
+  { label: "Why Choose Us",   href: "#why-us" },
+  { label: "Our Projects",    href: "#projects" },
+  { label: "Blog",            href: "#blog" },
 ];
 
 const inquiryLinks = [
-  { label: "Our Clients", href: "/clients" },
-  { label: "What Makes Us Different", href: "/difference" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Testimonials",   href: "#testimonials" },
+  { label: "Contact Us",     href: "#contact" },
 ];
+
+const socialLinks = [
+  { icon: "photo_camera", label: "Instagram",  href: "#" },
+  { icon: "groups",       label: "Facebook",   href: "#" },
+  { icon: "work",         label: "LinkedIn",   href: "#" },
+  { icon: "smart_display",label: "YouTube",    href: "#" },
+];
+
+const scrollTo = (id: string) => {
+  document.getElementById(id.replace("#", ""))?.scrollIntoView({ behavior: "smooth" });
+};
 
 export default function Footer() {
   const ref = useRef(null);
@@ -45,14 +55,18 @@ export default function Footer() {
         transition={{ duration: 10, repeat: Infinity }}
       />
 
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 sm:px-8 md:px-12 pt-20 pb-12 max-w-[1440px] mx-auto">
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 sm:px-8 md:px-12 pt-16 pb-10 max-w-[1440px] mx-auto">
         <motion.div
           className="sm:col-span-2 lg:col-span-1 space-y-6"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <Link href="/" className="flex items-center gap-2.5 group">
+          <a
+            href="#"
+            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            className="flex items-center gap-2.5 group"
+          >
             <motion.span
               className="material-symbols-outlined text-[#e6c275] text-[20px]"
               whileHover={{ rotate: 15, scale: 1.1 }}
@@ -63,18 +77,20 @@ export default function Footer() {
               className="text-xl uppercase tracking-[0.1em] text-white font-bold"
               style={{ fontFamily: "var(--font-noto-serif), serif" }}
             >
-              AURELIAN
+              FOURWALLS
             </span>
-          </Link>
+          </a>
           <p className="text-[#d0d8e6] text-sm leading-relaxed max-w-xs">
-            Defining the intersection of architecture and soul through
-            structural poise and material honesty.
+            Fourwalls Interiors &amp; Constructions delivers high quality interior
+            design and construction services across South India with a strong focus
+            on creativity, durability, and customer satisfaction.
           </p>
           <div className="flex gap-3">
-            {["public", "camera", "mail"].map((icon, i) => (
+            {socialLinks.map(({ icon, label, href }, i) => (
               <motion.a
-                key={icon}
-                href="#"
+                key={label}
+                href={href}
+                aria-label={label}
                 className="w-9 h-9 flex items-center justify-center rounded-sm bg-white/4 border border-white/15 group"
                 whileHover={{
                   backgroundColor: "#e6c275",
@@ -110,13 +126,14 @@ export default function Footer() {
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.2 + i * 0.07 }}
               >
-                <Link
+                <a
                   href={href}
+                  onClick={(e) => { e.preventDefault(); scrollTo(href); }}
                   className="text-[#d0d8e6] hover:text-[#f0d48a] transition-colors text-sm font-medium flex items-center gap-2 group"
                 >
                   <motion.span className="w-0 h-px bg-[#e6c275] transition-all duration-300 group-hover:w-4" />
                   {label}
-                </Link>
+                </a>
               </motion.div>
             ))}
           </nav>
@@ -139,16 +156,32 @@ export default function Footer() {
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.3 + i * 0.07 }}
               >
-                <Link
+                <a
                   href={href}
+                  onClick={(e) => { e.preventDefault(); scrollTo(href); }}
                   className="text-[#d0d8e6] hover:text-[#f0d48a] transition-colors text-sm font-medium flex items-center gap-2 group"
                 >
                   <motion.span className="w-0 h-px bg-[#e6c275] transition-all duration-300 group-hover:w-4" />
                   {label}
-                </Link>
+                </a>
               </motion.div>
             ))}
           </nav>
+
+          <div className="pt-4 flex flex-col gap-3">
+            {[
+              { icon: "call",          text: "+91 98765 43210" },
+              { icon: "mail",          text: "info@fourwalls.in" },
+              { icon: "location_on",   text: "Chennai, Tamil Nadu" },
+            ].map(({ icon, text }) => (
+              <div key={icon} className="flex items-center gap-3 text-[#d0d8e6]">
+                <span className="material-symbols-outlined text-[#e6c275] text-[16px]">
+                  {icon}
+                </span>
+                <span className="text-sm">{text}</span>
+              </div>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div
@@ -158,11 +191,11 @@ export default function Footer() {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <h5 className="text-sm uppercase tracking-[0.1em] font-bold text-white">
-            Studio Updates
+            Stay Updated
           </h5>
           <p className="text-[#d0d8e6] text-sm leading-relaxed">
-            Subscribe for insights on architectural trends and our latest
-            project reveals.
+            Subscribe for the latest design trends, project reveals, and construction
+            insights from our team.
           </p>
           <div className="flex items-center border-b-2 border-white/25 py-2 focus-within:border-[#e6c275] transition-colors duration-300">
             <input
@@ -174,22 +207,16 @@ export default function Footer() {
               className="material-symbols-outlined text-lg text-white/80 hover:text-[#e6c275] transition-colors ml-2"
               whileHover={{ x: 3 }}
               whileTap={{ scale: 0.9 }}
+              aria-label="Subscribe"
             >
               arrow_forward
             </motion.button>
           </div>
-          <div className="flex flex-col gap-2 pt-1">
-            {[
-              { icon: "call", text: "+91 (44) 2000 1000" },
-              { icon: "mail", text: "studio@aurelian.in" },
-            ].map(({ icon, text }) => (
-              <div key={icon} className="flex items-center gap-3 text-[#d0d8e6]">
-                <span className="material-symbols-outlined text-[#e6c275] text-[16px]">
-                  {icon}
-                </span>
-                <span className="text-sm">{text}</span>
-              </div>
-            ))}
+          <div className="pt-2">
+            <p className="text-[#d0d8e6] text-xs leading-relaxed">
+              Service areas: Chennai, Coimbatore, Bangalore, Hyderabad &amp; across
+              South India.
+            </p>
           </div>
         </motion.div>
       </div>
@@ -201,7 +228,7 @@ export default function Footer() {
         transition={{ delay: 0.8 }}
       >
         <p className="text-xs uppercase tracking-[0.08em] text-white/70 font-bold text-center sm:text-left">
-          &copy; 2024 Aurelian Collective &middot; Built with Structural Poise
+          &copy; 2025 Fourwalls Interiors &amp; Constructions &middot; South India
         </p>
         <div className="flex gap-6 text-xs uppercase tracking-[0.08em] font-bold">
           {["Privacy Policy", "Terms of Service"].map((item) => (

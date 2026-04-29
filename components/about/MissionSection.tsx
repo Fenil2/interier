@@ -8,7 +8,7 @@ export default function MissionSection() {
   const inView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section ref={ref} className="bg-[#131b2e] py-24 md:py-36 px-4 sm:px-8 lg:px-24 relative overflow-hidden">
+    <section ref={ref} className="bg-[#131b2e] py-16 md:py-24 px-4 sm:px-8 lg:px-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern-light pointer-events-none" />
 
       {/* Decorative triangle */}

@@ -24,7 +24,7 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="py-16 md:py-32 bg-on-primary-fixed text-surface px-4 sm:px-8 lg:px-24">
+    <section className="py-14 md:py-24 bg-on-primary-fixed text-surface px-4 sm:px-8 lg:px-24">
       {/* Header */}
       <div className="max-w-[1440px] mx-auto text-center mb-12 md:mb-24">
         <span className="block font-label text-[0.6875rem] uppercase tracking-[0.2em] text-tertiary-fixed-dim mb-6">

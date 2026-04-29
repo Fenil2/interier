@@ -1,6 +1,6 @@
 export default function BentoEdgeSection() {
   return (
-    <section className="px-4 sm:px-8 md:px-12 py-16 md:py-24 bg-surface-container-low relative">
+    <section className="px-4 sm:px-8 md:px-12 py-14 md:py-20 bg-surface-container-low relative">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto md:h-[800px]">
 

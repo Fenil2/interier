@@ -17,9 +17,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Fourwalls Interiors & Constructions | Architectural Minimalism",
+  title: "Fourwalls Interiors & Constructions | South India",
   description:
-    "Crafting spaces that resonate through precision engineering and intentional architectural soul.",
+    "Fourwalls Interiors & Constructions brings your dream spaces to life with expert interior design and reliable construction solutions across South India.",
 };
 
 export default function RootLayout({

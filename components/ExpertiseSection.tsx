@@ -101,7 +101,7 @@ export default function ExpertiseSection() {
   useInView(headerRef, { once: true, amount: 0.3 });
 
   return (
-    <section className="py-20 md:py-28 bg-[#f0ede9]">
+    <section id="services" className="py-16 md:py-24 bg-[#f0ede9] scroll-mt-20">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
         {/* Header */}
         <div
@@ -123,8 +123,8 @@ export default function ExpertiseSection() {
             <FadeIn direction="right" delay={0.2}>
               <p className="max-w-md text-[#3c475a] leading-relaxed text-base md:text-lg">
                 Comprehensive design and build solutions tailored for clients
-                who expect clear planning, precise execution, and lasting
-                architectural integrity.
+                across South India — from residential interiors to complete
+                turnkey construction projects.
               </p>
             </FadeIn>
           </div>
@@ -202,13 +202,17 @@ export default function ExpertiseSection() {
         {/* Bottom CTA */}
         <FadeIn direction="up" delay={0.5} className="mt-12 flex items-center justify-center">
           <motion.a
-            href="/services"
+            href="#contact"
+            onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+              e.preventDefault();
+              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+            }}
             className="inline-flex min-h-12 items-center justify-center gap-3 rounded-sm bg-[#131b2e] px-7 py-4 font-label text-xs font-bold uppercase tracking-widest text-[#e6c275] transition-colors hover:bg-[#1e2d48]"
             whileHover={{ scale: 1.03, backgroundColor: "#131b2e", color: "#fff" }}
             whileTap={{ scale: 0.97 }}
             transition={{ duration: 0.25 }}
           >
-            Explore All Services
+            Get Free Consultation
             <span className="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1">
               arrow_forward
             </span>

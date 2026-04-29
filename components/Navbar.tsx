@@ -1,28 +1,50 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Portfolio",   href: "/portfolio" },
-  { label: "Services",    href: "/services" },
-  { label: "Philosophy",  href: "/about" },
-  { label: "Blog",        href: "/blog" },
-  { label: "Our Clients", href: "/clients" },
-  { label: "Contact",     href: "/contact" },
+  { label: "About",        href: "#about" },
+  { label: "Services",     href: "#services" },
+  { label: "Why Us",       href: "#why-us" },
+  { label: "Projects",     href: "#projects" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Blog",         href: "#blog" },
+  { label: "Contact",      href: "#contact" },
 ];
 
 export default function Navbar() {
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const ids = navLinks.map((l) => l.href.replace("#", ""));
+    const observers: IntersectionObserver[] = [];
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
+        { rootMargin: "-35% 0px -55% 0px" }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const el = document.getElementById(href.replace("#", ""));
+    el?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  };
 
   return (
     <>
@@ -37,9 +59,9 @@ export default function Navbar() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       >
         <nav className="flex justify-between items-center px-4 sm:px-8 py-4 max-w-[1440px] mx-auto">
-          <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
+          <a href="#" className="flex items-center gap-2.5 shrink-0 group">
             <motion.span
-              className={`material-symbols-outlined text-[22px] transition-colors duration-500 ${scrolled ? "text-[#e6c275]" : "text-[#e6c275]"}`}
+              className="material-symbols-outlined text-[22px] text-[#e6c275]"
               whileHover={{ rotate: 15, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -49,13 +71,13 @@ export default function Navbar() {
               className={`text-xl sm:text-2xl font-bold tracking-[-0.02em] transition-colors duration-500 ${scrolled ? "text-white" : "text-[#131b2e]"}`}
               style={{ fontFamily: "var(--font-noto-serif), serif" }}
             >
-              AURELIAN
+              FOURWALLS
             </motion.span>
-          </Link>
+          </a>
 
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map(({ label, href }, i) => {
-              const isActive = pathname === href;
+              const isActive = activeSection === href.replace("#", "");
               return (
                 <motion.div
                   key={href}
@@ -63,8 +85,9 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.06 }}
                 >
-                  <Link
+                  <a
                     href={href}
+                    onClick={(e) => handleClick(e, href)}
                     className={`relative text-[0.95rem] font-semibold transition-colors duration-300 group pb-1 ${
                       isActive
                         ? scrolled ? "text-[#e6c275]" : "text-[#131b2e]"
@@ -79,7 +102,7 @@ export default function Navbar() {
                       animate={{ width: isActive ? "100%" : "0%" }}
                       transition={{ duration: 0.3 }}
                     />
-                  </Link>
+                  </a>
                 </motion.div>
               );
             })}
@@ -91,7 +114,10 @@ export default function Navbar() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <Link href="/contact">
+              <a
+                href="#contact"
+                onClick={(e) => handleClick(e, "#contact")}
+              >
                 <motion.span
                   className={`hidden md:inline-flex min-h-11 items-center gap-2 px-5 py-2.5 rounded-sm font-bold text-[0.8rem] uppercase tracking-[0.08em] transition-colors duration-500 ${
                     scrolled
@@ -101,9 +127,9 @@ export default function Navbar() {
                   whileHover={{ scale: 1.03, y: -1 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  Book Consultation
+                  Get Free Consultation
                 </motion.span>
-              </Link>
+              </a>
             </motion.div>
             <motion.button
               onClick={() => setOpen((v) => !v)}
@@ -146,7 +172,7 @@ export default function Navbar() {
             <div className="h-[72px] shrink-0" />
             <nav className="relative flex flex-col px-6 sm:px-8 overflow-y-auto divide-y divide-white/6">
               {navLinks.map(({ label, href }, i) => {
-                const isActive = pathname === href;
+                const isActive = activeSection === href.replace("#", "");
                 return (
                   <motion.div
                     key={href}
@@ -154,9 +180,9 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    <Link
+                    <a
                       href={href}
-                      onClick={() => setOpen(false)}
+                      onClick={(e) => handleClick(e, href)}
                       className={`flex items-center justify-between py-5 text-2xl font-bold tracking-tight transition-colors duration-200 ${
                         isActive ? "text-[#e6c275]" : "text-white hover:text-[#e6c275]"
                       }`}
@@ -164,7 +190,7 @@ export default function Navbar() {
                     >
                       {label}
                       <span className="material-symbols-outlined text-xl opacity-30">arrow_forward</span>
-                    </Link>
+                    </a>
                   </motion.div>
                 );
               })}
@@ -175,15 +201,18 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <Link href="/contact" onClick={() => setOpen(false)}>
+              <a
+                href="#contact"
+                onClick={(e) => handleClick(e, "#contact")}
+              >
                 <motion.span
                   className="block w-full text-center bg-[#e6c275] text-[#131b2e] px-6 py-4 rounded-sm font-bold uppercase tracking-widest text-sm"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  Book Consultation
+                  Get Free Consultation
                 </motion.span>
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         )}
