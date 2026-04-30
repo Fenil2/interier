@@ -64,14 +64,15 @@ export default function Navbar() {
             <motion.div
               whileHover={{ scale: 1.03, y: -1 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="relative h-14 w-[150px] sm:h-16 sm:w-[180px]"
+              className="shrink-0"
             >
               <Image
                 src="/flourlogo.jpeg"
                 alt="Flour Logo"
-                fill
-                className="object-contain"
-                sizes="(max-width: 640px) 150px, 180px"
+                width={1000}
+                height={1000}
+                className="h-14 w-auto sm:h-16"
+                sizes="(max-width: 640px) 56px, 64px"
                 priority
               />
             </motion.div>
