@@ -16,7 +16,7 @@ export default function CTASection() {
   const bgY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-[#0d1420] py-16 text-white md:py-24">
+    <section ref={ref} className="relative overflow-hidden bg-[#0d1420] py-10 text-white md:py-20">
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
         <img
           alt="Final CTA Background"
@@ -44,7 +44,7 @@ export default function CTASection() {
 
       <div className="absolute bottom-0 left-0 right-0 z-[1] h-px bg-gradient-to-r from-transparent via-[#e6c275]/50 to-transparent" />
 
-      <div className="relative z-10 mx-auto grid max-w-[1440px] grid-cols-1 gap-10 px-4 sm:px-8 md:px-16 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-end">
+      <div className="relative z-10 mx-auto grid max-w-[1440px] grid-cols-1 gap-8 md:gap-10 px-4 sm:px-8 md:px-16 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-end">
         <div className="max-w-4xl">
           <FadeIn direction="up">
             <span className="eyebrow mb-8 block">Ready to Begin</span>

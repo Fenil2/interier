@@ -18,7 +18,7 @@ export default function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-16 md:py-24 bg-surface relative overflow-hidden scroll-mt-20"
+      className="py-10 md:py-20 bg-surface relative overflow-hidden scroll-mt-20"
     >
       <div className="absolute inset-0 bg-dot-pattern pointer-events-none" />
 

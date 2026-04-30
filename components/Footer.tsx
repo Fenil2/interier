@@ -71,14 +71,14 @@ export default function Footer() {
           >
             <motion.div
               whileHover={{ scale: 1.03, y: -1 }}
-              className="relative h-14 w-[160px]"
+              className="relative h-16 w-[190px] sm:h-[72px] sm:w-[220px]"
             >
               <Image
                 src="/flourlogo.jpeg"
                 alt="Flour Logo"
                 fill
                 className="object-contain"
-                sizes="160px"
+                sizes="(max-width: 640px) 190px, 220px"
               />
             </motion.div>
           </a>

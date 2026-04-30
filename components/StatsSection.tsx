@@ -16,7 +16,7 @@ export default function StatsSection() {
   const inView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-[#131b2e] text-white relative overflow-hidden">
+    <section ref={ref} className="py-10 md:py-20 bg-[#131b2e] text-white relative overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 bg-grid-pattern-light pointer-events-none opacity-20" />
 
@@ -49,7 +49,7 @@ export default function StatsSection() {
       />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-center">
 
           {/* Left copy */}
           <FadeIn direction="left">

@@ -106,11 +106,11 @@ export default function ExpertiseSection() {
   useInView(headerRef, { once: true, amount: 0.3 });
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-[#f0ede9] scroll-mt-20">
+    <section id="services" className="py-10 md:py-20 bg-[#f0ede9] scroll-mt-20 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
         <div
           ref={headerRef}
-          className="mb-12 grid grid-cols-1 items-end gap-6 md:mb-16 md:grid-cols-12"
+          className="mb-8 grid grid-cols-1 items-end gap-6 md:mb-16 md:grid-cols-12"
         >
           <div className="md:col-span-7">
             <FadeIn direction="left">

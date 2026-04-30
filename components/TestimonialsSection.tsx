@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="testimonials" ref={ref} className="py-12 md:py-16 bg-[#f6f3ee] relative overflow-hidden scroll-mt-20">
+    <section id="testimonials" ref={ref} className="py-8 md:py-14 bg-[#f6f3ee] relative overflow-hidden scroll-mt-20">
       <div className="absolute inset-0 bg-dot-pattern pointer-events-none opacity-60" />
 
       {/* Decorative background quote */}

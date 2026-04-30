@@ -29,7 +29,7 @@ export default function WhyChooseSection() {
     <section
       id="why-us"
       ref={ref}
-      className="py-16 md:py-24 bg-[#131b2e] text-white relative overflow-hidden scroll-mt-20"
+      className="py-10 md:py-20 bg-[#131b2e] text-white relative overflow-hidden scroll-mt-20"
     >
       <div className="absolute inset-0 bg-grid-pattern-light pointer-events-none opacity-15" />
 
@@ -52,7 +52,7 @@ export default function WhyChooseSection() {
       />
 
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 z-10">
-        <div className="mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+        <div className="mb-8 md:mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
           <div className="lg:col-span-6">
             <FadeIn direction="left">
               <h2
@@ -115,7 +115,7 @@ export default function WhyChooseSection() {
           ))}
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-12">
+        <div className="mt-10 md:mt-16 border-t border-white/10 pt-8 md:pt-12">
           <FadeIn direction="up">
             <h3
               className="text-3xl md:text-4xl font-bold text-white"

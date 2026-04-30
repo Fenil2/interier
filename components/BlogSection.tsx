@@ -36,12 +36,12 @@ export default function BlogSection() {
   return (
     <section
       id="blog"
-      className="py-16 md:py-24 bg-white relative overflow-hidden scroll-mt-20"
+      className="py-10 md:py-20 bg-white relative overflow-hidden scroll-mt-20"
     >
       <div className="absolute inset-0 bg-dot-pattern pointer-events-none opacity-50" />
 
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16">
-        <div className="mb-14 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+        <div className="mb-8 md:mb-14 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
           <FadeIn direction="up">
             <span className="eyebrow mb-4 block">Design Ideas &amp; Insights</span>
             <h2

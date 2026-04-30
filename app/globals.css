@@ -15,9 +15,9 @@
    BASE
 ───────────────────────────────────────────────────────────── */
 @layer base {
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
   body {
-    min-height: max(884px, 100dvh);
+    min-height: 100dvh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: none; /* custom cursor */

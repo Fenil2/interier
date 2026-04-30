@@ -40,12 +40,12 @@ export default function PortfolioSection() {
   const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section id="projects" className="py-16 md:py-24 bg-white relative overflow-hidden scroll-mt-20">
+    <section id="projects" className="py-10 md:py-20 bg-white relative overflow-hidden scroll-mt-20">
       <div className="absolute inset-0 bg-diagonal-pattern pointer-events-none" />
 
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-14 gap-6">
           <FadeIn direction="up">
             <span className="eyebrow mb-5 block">Our Portfolio</span>
             <h2 className="text-4xl md:text-5xl text-[#131b2e] font-bold tracking-tight"

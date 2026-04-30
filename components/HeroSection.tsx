@@ -20,7 +20,7 @@ export default function HeroSection() {
     <section
       id="home"
       ref={containerRef}
-      className="relative min-h-[100svh] w-full flex items-center overflow-hidden py-24 sm:py-28 lg:py-32"
+      className="relative min-h-[100svh] w-full flex items-center overflow-hidden py-14 sm:py-24 lg:py-32"
     >
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
         <img

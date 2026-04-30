@@ -25,12 +25,12 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={ref}
-      className="py-16 md:py-24 bg-[#f6f3ee] relative overflow-hidden scroll-mt-20"
+      className="py-10 md:py-20 bg-[#f6f3ee] relative overflow-hidden scroll-mt-20"
     >
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none opacity-40" />
 
       <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-14">
           {/* Contact Info Column */}
           <FadeIn direction="left">
             <div className="space-y-10">
