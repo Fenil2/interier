@@ -1,47 +1,25 @@
-import type { Metadata } from "next";
-import { Noto_Serif, Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
-import GlobalEffects from "@/components/GlobalEffects";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import Preloader from "../components/fourwalls/Preloader";
 
-const notoSerif = Noto_Serif({
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-noto-serif",
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-plus-jakarta-sans",
+  weight: ["300", "400", "500", "600"]
 });
 
 export const metadata: Metadata = {
-  title: "Fourwalls Interiors & Constructions | South India",
-  description:
-    "Fourwalls Interiors & Constructions brings your dream spaces to life with expert interior design and reliable construction solutions across South India.",
+  title: "Fourwalls Interiors & Constructions",
+  description: "Exact replica build in Next.js 15"
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-          rel="stylesheet"
-        />
-      </head>
-      <body
-        className={`${notoSerif.variable} ${plusJakartaSans.variable} bg-background text-on-surface font-body selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed`}
-        style={{
-          fontFamily: "var(--font-plus-jakarta-sans), sans-serif",
-        }}
-      >
-        <GlobalEffects />
+    <html lang="en" className="scroll-smooth">
+      <body className={`${outfit.variable} bg-white font-[var(--font-outfit)] text-[#1e4a5c] antialiased`}>
+        <Preloader />
         {children}
       </body>
     </html>

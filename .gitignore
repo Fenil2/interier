@@ -1,14 +1,1 @@
-node_modules/
-.next/
-out/
-dist/
-build/
-
-*.log
-*.tsbuildinfo
-
-.env
-.env*.local
-
-.vercel/
-.DS_Store
+node_modules
