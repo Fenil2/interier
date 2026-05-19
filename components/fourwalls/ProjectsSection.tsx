@@ -54,31 +54,6 @@ export default function ProjectsSection() {
               className={`cinematic-panel relative overflow-hidden rounded-[14px] ${project.className}`}
             >
               <Image src={project.image} alt={project.alt} fill className="cinematic-image object-cover transition-transform duration-700" />
-
-              {/* Strong gradient — full bottom-half coverage */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#010f18fd] via-[#010f1880] via-[45%] to-transparent" />
-
-              {/* Text block */}
-              <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-6 pt-10">
-                <p
-                  className="mb-1.5 text-[0.6rem] font-bold uppercase tracking-[0.22em]"
-                  style={{ color: project.color, textShadow: "0 1px 6px rgba(0,0,0,0.7)" }}
-                >
-                  {project.category}
-                </p>
-                <p
-                  className="font-[var(--font-outfit)] text-[1.18rem] font-bold leading-[1.28] text-white"
-                  style={{ textShadow: "0 2px 14px rgba(0,0,0,0.85)" }}
-                >
-                  {project.title}
-                </p>
-                <span
-                  className="mt-2.5 inline-flex items-center gap-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.12em] transition-colors duration-200"
-                  style={{ color: project.color, textShadow: "0 1px 6px rgba(0,0,0,0.6)" }}
-                >
-                  View Project →
-                </span>
-              </div>
             </MotionReveal>
           ))}
         </div>

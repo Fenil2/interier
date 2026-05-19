@@ -13,8 +13,8 @@ export default function AboutSection() {
             <MotionReveal variant="left" className="relative">
               <div className="cinematic-panel relative h-120 overflow-hidden rounded-[14px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80"
-                  alt="Fourwalls Interior Design Portfolio"
+                  src="/Gemini_Generated_Image_mteby4mteby4mteb.jpg"
+                  alt="Fourwalls Interior Design Portfolio - Living Room with Tray Ceiling"
                   fill
                   className="cinematic-image object-cover"
                 />
@@ -50,8 +50,8 @@ export default function AboutSection() {
             <MotionReveal delayMs={220} className="relative mb-8 pb-5 md:hidden">
               <div className="cinematic-panel relative h-65 overflow-hidden rounded-[14px] sm:h-80">
                 <Image
-                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80"
-                  alt="Fourwalls Interior Design Portfolio"
+                  src="/Gemini_Generated_Image_mteby4mteby4mteb.jpg"
+                  alt="Fourwalls Interior Design Portfolio - Living Room with Tray Ceiling"
                   fill
                   className="cinematic-image object-cover"
                 />

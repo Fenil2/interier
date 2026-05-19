@@ -11,8 +11,8 @@ const posts: BlogPostItem[] = [
     "Fourwalls Interiors & Constructions is dedicated to designing and building spaces that reflect both functionality and aesthetic appeal.",
     "#01c1ff",
     "bg-[#01c1ff1a] text-[#0099cc]",
-    "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80",
-    "About Fourwalls Interiors & Constructions"
+    "/Gemini_Generated_Image_qoi7jvqoi7jvqoi7.jpg",
+    "Custom Wood Grain TV Unit with Glass Display"
   ],
   [
     "Our Services",
@@ -20,8 +20,8 @@ const posts: BlogPostItem[] = [
     "We create customized interior designs, provide complete construction solutions, and deliver turnkey project execution.",
     "#00dfd7",
     "bg-[#00dfd71a] text-[#00b5ae]",
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80",
-    "Interior and Construction Solutions"
+    "/Gemini_Generated_Image_czju7nczju7nczju.jpg",
+    "Bathroom Interior with Maroon Mirror Cabinet"
   ],
   [
     "Why Choose Us",
@@ -29,8 +29,8 @@ const posts: BlogPostItem[] = [
     "Proven experience, dedicated project management, high quality materials, customized design approach, clear communication, and timely delivery.",
     "#f9693a",
     "bg-[#f9693a1a] text-[#d44e23]",
-    "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=700&q=80",
-    "What Makes Us Different"
+    "/Gemini_Generated_Image_yyrngryyrngryyrn.jpg",
+    "Modern Bedroom Wardrobe in Grey and Yellow"
   ]
 ];
 

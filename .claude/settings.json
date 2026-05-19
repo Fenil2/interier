@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"d:\\\\Frelancing\\\\interior-a\\\\node_modules\\\\lightningcss\" /b)",
+      "Bash(node -e \"const lc = require\\('./node_modules/lightningcss'\\); console.log\\('lightningcss loaded OK'\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"const p=require\\('./node_modules/package.json'\\); console.log\\(JSON.stringify\\(p,null,2\\)\\)\")",
+      "Bash(node -e \"const p=require\\('d:/Frelancing/interior-a/package.json'\\); console.log\\('deps:', Object.keys\\(p.dependencies||{}\\)\\); console.log\\('devdeps:', Object.keys\\(p.devDependencies||{}\\)\\)\")",
+      "Bash(node -e \"const p=require\\('./node_modules/@tailwindcss/node/package.json'\\); console.log\\('peerDeps:', JSON.stringify\\(p.peerDependencies,null,2\\)\\); console.log\\('deps:', JSON.stringify\\(p.dependencies,null,2\\)\\)\")",
+      "Bash(npm list *)"
+    ]
+  }
+}

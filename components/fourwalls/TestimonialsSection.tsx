@@ -1,3 +1,4 @@
+import { GoogleIcon } from "./icons";
 import MotionReveal from "./MotionReveal";
 import { BodyText, Container, SectionHeading, SectionTag } from "./shared";
 
@@ -57,8 +58,8 @@ export default function TestimonialsSection() {
               className="relative rounded-[14px] border border-[#01c1ff1a] bg-white/[0.04] p-6 transition-all duration-300 sm:p-9"
             >
               <div className="mb-4 flex items-start justify-between">
-                <div className="text-[0.88rem] tracking-[0.05em] text-[#ffc309]">*****</div>
-                <div className="font-[var(--font-outfit)] text-[3.5rem] leading-none text-[#01c1ff]/20">&quot;</div>
+                <div className="text-[0.88rem] tracking-[0.05em] text-[#ffc309]">★★★★★</div>
+                <GoogleIcon />
               </div>
               <p className="mb-7 text-[0.91rem] font-light italic leading-[1.82] text-white/58">{text}</p>
               <div className="flex items-center gap-4">

@@ -26,19 +26,19 @@ export const navLinks: NavLink[] = [
 export const heroMosaic: HeroMosaicItem[] = [
   {
     title: "Residential Interior",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-    alt: "Luxury Residential Interior",
+    image: "/Gemini_Generated_Image_2yqeyk2yqeyk2yqe.jpg",
+    alt: "Luxury Residential Interior with LED Cabinets",
     className: "row-span-2"
   },
   {
-    title: "Commercial Design",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80",
-    alt: "Modern Office Interior"
+    title: "False Ceiling Design",
+    image: "/Gemini_Generated_Image_tolc7utolc7utolc.jpg",
+    alt: "False Ceiling with Warm LED and Ceiling Fans"
   },
   {
     title: "Modular Kitchen",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
-    alt: "Modular Kitchen Design"
+    image: "/Gemini_Generated_Image_nf0zo9nf0zo9nf0z.jpg",
+    alt: "Modular Kitchen Blue and Cream Design"
   }
 ];
 
@@ -79,45 +79,45 @@ export const projects: ProjectItem[] = [
     key: "a",
     className: "md:col-[1/6] md:row-[1/3]",
     category: "Residential Interior",
-    title: "Luxury Villa - Chennai",
+    title: "Bedroom Suite - Bangalore",
     color: "#01c1ff",
-    image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900&q=85",
-    alt: "Luxury Villa Chennai"
+    image: "/Gemini_Generated_Image_3ohdrs3ohdrs3ohd.png",
+    alt: "Bedroom Suite with Dark Marble Wardrobe"
   },
   {
     key: "b",
     className: "md:col-[6/10] md:row-[1/2]",
-    category: "Commercial Interior",
-    title: "Tech Office - Coimbatore",
+    category: "Modular Kitchen",
+    title: "Modular Kitchen - Chennai",
     color: "#00dfd7",
-    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=700&q=85",
-    alt: "Tech Office Coimbatore"
+    image: "/Gemini_Generated_Image_f9q0yrf9q0yrf9q0.jpg",
+    alt: "Red Modular Kitchen Design"
   },
   {
     key: "c",
     className: "md:col-[10/13] md:row-[1/2]",
-    category: "Modular Kitchen",
-    title: "Signature Kitchen - Bangalore",
+    category: "Wardrobe & Storage",
+    title: "Custom Wardrobe - Hyderabad",
     color: "#ffc309",
-    image: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=85",
-    alt: "Signature Kitchen Bangalore"
+    image: "/Gemini_Generated_Image_91jskm91jskm91js.jpg",
+    alt: "Purple Custom Wardrobe and Storage"
   },
   {
     key: "d",
     className: "md:col-[6/9] md:row-[2/3]",
-    category: "Renovation",
-    title: "Heritage Apt - Madurai",
+    category: "Construction Projects",
+    title: "Artistic False Ceiling - Coimbatore",
     color: "#f9693a",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&q=85",
-    alt: "Heritage Apartment Madurai"
+    image: "/Gemini_Generated_Image_ka6k9pka6k9pka6k.jpg",
+    alt: "Decorative False Ceiling with Curved LED Patterns"
   },
   {
     key: "e",
     className: "md:col-[9/13] md:row-[2/3]",
-    category: "Construction",
-    title: "Commercial Complex - Hyderabad",
+    category: "Residential Interior",
+    title: "Living Room Design - Madurai",
     color: "#01c1ff",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&q=85",
-    alt: "Commercial Complex Hyderabad"
+    image: "/Gemini_Generated_Image_v8q3ggv8q3ggv8q3.jpg",
+    alt: "Room Divider and Partition with Display Niches"
   }
 ];
