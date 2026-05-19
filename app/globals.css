@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  --font-outfit: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
