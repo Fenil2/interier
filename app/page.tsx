@@ -4,6 +4,7 @@ import ContactSection from "../components/fourwalls/ContactSection";
 import CtaBand from "../components/fourwalls/CtaBand";
 import Footer from "../components/fourwalls/Footer";
 import HeroSection from "../components/fourwalls/HeroSection";
+import InstagramSection from "../components/fourwalls/InstagramSection";
 import Navbar from "../components/fourwalls/Navbar";
 import ProjectsSection from "../components/fourwalls/ProjectsSection";
 import ServicesSection from "../components/fourwalls/ServicesSection";
@@ -21,6 +22,7 @@ export default function HomePage() {
         <WhySection />
         <ProjectsSection />
         <TestimonialsSection />
+        <InstagramSection />
         <CtaBand />
         <BlogSection />
         <ContactSection />

@@ -80,7 +80,7 @@ export default function Footer() {
 
       <div className="mx-auto mt-6 flex max-w-7xl flex-col justify-between gap-2 border-t border-[#1e3824] px-5 pt-4 text-[0.82rem] text-[#4e6858] md:flex-row md:px-10">
         <p>
-          Copyright 2025 <span className="text-[#c8a856]">Fourwalls Interiors &amp; Constructions</span>. All rights reserved.
+          Copyright 2026 <span className="text-[#c8a856]">Fourwalls Interiors &amp; Constructions</span>. All rights reserved.
         </p>
         <p className="flex items-center gap-3">
           <Link href="/privacy-policy" className="transition-colors hover:text-[#c8a856]">Privacy Policy</Link>
