@@ -1,4 +1,4 @@
-export type NavLink = {
+﻿export type NavLink = {
   label: string;
   href: string;
 };
@@ -49,17 +49,17 @@ export const stats: StatItem[] = [
 ];
 
 export const metrics: MetricItem[] = [
-  ["500+", "Projects Completed", "#01c1ff"],
-  ["South India", "Strong Presence", "#00dfd7"],
-  ["End to End", "Turnkey Solutions", "#ffc309"],
-  ["On Time", "Project Delivery", "#f9693a"]
+  ["500+", "Projects Completed", "#c8a856"],
+  ["South India", "Strong Presence", "#c8a856"],
+  ["End to End", "Turnkey Solutions", "#c8a856"],
+  ["On Time", "Project Delivery", "#c8a856"]
 ];
 
 export const progress: ProgressItem[] = [
-  ["500+ Projects", "100%", "#01c1ff"],
-  ["Turnkey Solutions", "100%", "#00dfd7"],
-  ["Transparent Pricing", "100%", "#ffc309"],
-  ["Experienced Team", "100%", "#f9693a"]
+  ["500+ Projects", "100%", "#c8a856"],
+  ["Turnkey Solutions", "100%", "#c8a856"],
+  ["Transparent Pricing", "100%", "#c8a856"],
+  ["Experienced Team", "100%", "#c8a856"]
 ];
 
 export const projectFilters: string[] = ["All", "Residential Interiors", "Commercial Interiors", "Construction Projects", "Renovation Projects"];
@@ -80,7 +80,7 @@ export const projects: ProjectItem[] = [
     className: "md:col-[1/6] md:row-[1/3]",
     category: "Residential Interior",
     title: "Bedroom Suite - Bangalore",
-    color: "#01c1ff",
+    color: "#c8a856",
     image: "/Gemini_Generated_Image_3ohdrs3ohdrs3ohd.png",
     alt: "Bedroom Suite with Dark Marble Wardrobe"
   },
@@ -89,7 +89,7 @@ export const projects: ProjectItem[] = [
     className: "md:col-[6/10] md:row-[1/2]",
     category: "Modular Kitchen",
     title: "Modular Kitchen - Chennai",
-    color: "#00dfd7",
+    color: "#c8a856",
     image: "/Gemini_Generated_Image_f9q0yrf9q0yrf9q0.jpg",
     alt: "Red Modular Kitchen Design"
   },
@@ -98,7 +98,7 @@ export const projects: ProjectItem[] = [
     className: "md:col-[10/13] md:row-[1/2]",
     category: "Wardrobe & Storage",
     title: "Custom Wardrobe - Hyderabad",
-    color: "#ffc309",
+    color: "#c8a856",
     image: "/Gemini_Generated_Image_91jskm91jskm91js.jpg",
     alt: "Purple Custom Wardrobe and Storage"
   },
@@ -107,7 +107,7 @@ export const projects: ProjectItem[] = [
     className: "md:col-[6/9] md:row-[2/3]",
     category: "Construction Projects",
     title: "Artistic False Ceiling - Coimbatore",
-    color: "#f9693a",
+    color: "#c8a856",
     image: "/Gemini_Generated_Image_ka6k9pka6k9pka6k.jpg",
     alt: "Decorative False Ceiling with Curved LED Patterns"
   },
@@ -116,7 +116,7 @@ export const projects: ProjectItem[] = [
     className: "md:col-[9/13] md:row-[2/3]",
     category: "Residential Interior",
     title: "Living Room Design - Madurai",
-    color: "#01c1ff",
+    color: "#c8a856",
     image: "/Gemini_Generated_Image_v8q3ggv8q3ggv8q3.jpg",
     alt: "Room Divider and Partition with Display Niches"
   }

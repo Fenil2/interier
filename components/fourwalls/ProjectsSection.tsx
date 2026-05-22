@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -19,7 +19,7 @@ export default function ProjectsSection() {
             </MotionReveal>
             <MotionReveal delayMs={100}>
               <SectionHeading>
-                Our <em className="text-[#01c1ff]">Recent Works</em>
+                Our <em className="text-[#c8a856]">Recent Works</em>
               </SectionHeading>
             </MotionReveal>
           </div>
@@ -36,8 +36,8 @@ export default function ProjectsSection() {
               onClick={() => setActive(filter)}
               className={`cursor-pointer rounded-full border px-4 py-[0.42rem] text-[0.76rem] tracking-[0.06em] transition-all duration-200 ${
                 active === filter
-                  ? "border-[#012c3d] bg-[#012c3d] text-[#01c1ff]"
-                  : "border-[#012c3d24] bg-transparent text-[#5f8a9f]"
+                  ? "border-[#1a2e20] bg-[#1a2e20] text-[#c8a856]"
+                  : "border-[#1a2e2024] bg-transparent text-[#6a8870]"
               }`}
             >
               {filter}
@@ -59,7 +59,7 @@ export default function ProjectsSection() {
         </div>
 
         <MotionReveal delayMs={180}>
-          <p className="mt-10 text-center text-[0.87rem] text-[#5f8a9f]">
+          <p className="mt-10 text-center text-[0.87rem] text-[#6a8870]">
             Explore our portfolio of thoughtfully designed interiors and well executed construction projects tailored to meet every client&apos;s needs.
           </p>
         </MotionReveal>

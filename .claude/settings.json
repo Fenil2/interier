@@ -7,7 +7,13 @@
       "Bash(node -e \"const p=require\\('./node_modules/package.json'\\); console.log\\(JSON.stringify\\(p,null,2\\)\\)\")",
       "Bash(node -e \"const p=require\\('d:/Frelancing/interior-a/package.json'\\); console.log\\('deps:', Object.keys\\(p.dependencies||{}\\)\\); console.log\\('devdeps:', Object.keys\\(p.devDependencies||{}\\)\\)\")",
       "Bash(node -e \"const p=require\\('./node_modules/@tailwindcss/node/package.json'\\); console.log\\('peerDeps:', JSON.stringify\\(p.peerDependencies,null,2\\)\\); console.log\\('deps:', JSON.stringify\\(p.dependencies,null,2\\)\\)\")",
-      "Bash(npm list *)"
+      "Bash(npm list *)",
+      "PowerShell(Get-ChildItem -Path \"d:\\\\Frelancing\\\\interior-a\" -Force | Select-Object Name, @{Name='Type';Expression={if\\($_.PSIsContainer\\){'Dir'}else{'File'}}} | Format-Table)",
+      "PowerShell(Get-ChildItem -Path \"d:\\\\Frelancing\\\\interior-a\\\\app\" -Recurse | Select-Object Name, @{Name='Type';Expression={if\\($_.PSIsContainer\\){'Dir'}else{'File'}}} | Format-Table)",
+      "Bash(not exist *)",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\Frelancing\\\\interior-a\\\\app\\\\dashboard\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\Frelancing\\\\interior-a\\\\app\\\\privacy-policy\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\Frelancing\\\\interior-a\\\\app\\\\thank-you\")"
     ]
   }
 }

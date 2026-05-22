@@ -1,8 +1,8 @@
-type IconProps = {
+﻿type IconProps = {
   color?: string;
 };
 
-export function HouseIcon({ color = "#01c1ff" }: IconProps) {
+export function HouseIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
@@ -11,7 +11,7 @@ export function HouseIcon({ color = "#01c1ff" }: IconProps) {
   );
 }
 
-export function ConstructionIcon({ color = "#00dfd7" }: IconProps) {
+export function ConstructionIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="2" y="14" width="6" height="8" rx="1" stroke={color} strokeWidth="1.8" />
@@ -22,7 +22,7 @@ export function ConstructionIcon({ color = "#00dfd7" }: IconProps) {
   );
 }
 
-export function GridIcon({ color = "#ffc309" }: IconProps) {
+export function GridIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="3" y="3" width="8" height="8" rx="1.5" stroke={color} strokeWidth="1.8" />
@@ -33,7 +33,7 @@ export function GridIcon({ color = "#ffc309" }: IconProps) {
   );
 }
 
-export function WrenchIcon({ color = "#f9693a" }: IconProps) {
+export function WrenchIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -47,7 +47,7 @@ export function WrenchIcon({ color = "#f9693a" }: IconProps) {
   );
 }
 
-export function KeyIcon({ color = "#01c1ff" }: IconProps) {
+export function KeyIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -61,7 +61,7 @@ export function KeyIcon({ color = "#01c1ff" }: IconProps) {
   );
 }
 
-export function StarIcon({ color = "#01c1ff" }: IconProps) {
+export function StarIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -74,7 +74,7 @@ export function StarIcon({ color = "#01c1ff" }: IconProps) {
   );
 }
 
-export function UserIcon({ color = "#00dfd7" }: IconProps) {
+export function UserIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="12" cy="8" r="4" stroke={color} strokeWidth="1.8" />
@@ -83,7 +83,7 @@ export function UserIcon({ color = "#00dfd7" }: IconProps) {
   );
 }
 
-export function BoxIcon({ color = "#ffc309" }: IconProps) {
+export function BoxIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M6 3h12l3 7H3L6 3zM3 10v11h18V10" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
@@ -92,7 +92,7 @@ export function BoxIcon({ color = "#ffc309" }: IconProps) {
   );
 }
 
-export function SunIcon({ color = "#f9693a" }: IconProps) {
+export function SunIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="12" cy="12" r="3" stroke={color} strokeWidth="1.8" />
@@ -106,7 +106,7 @@ export function SunIcon({ color = "#f9693a" }: IconProps) {
   );
 }
 
-export function ChatIcon({ color = "#00dfd7" }: IconProps) {
+export function ChatIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
@@ -114,7 +114,7 @@ export function ChatIcon({ color = "#00dfd7" }: IconProps) {
   );
 }
 
-export function ClockIcon({ color = "#01c1ff" }: IconProps) {
+export function ClockIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="12" cy="12" r="10" stroke={color} strokeWidth="1.8" />
@@ -123,7 +123,7 @@ export function ClockIcon({ color = "#01c1ff" }: IconProps) {
   );
 }
 
-export function PhoneIcon({ color = "#01c1ff" }: IconProps) {
+export function PhoneIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -137,7 +137,7 @@ export function PhoneIcon({ color = "#01c1ff" }: IconProps) {
   );
 }
 
-export function MailIcon({ color = "#00dfd7" }: IconProps) {
+export function MailIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
@@ -146,7 +146,7 @@ export function MailIcon({ color = "#00dfd7" }: IconProps) {
   );
 }
 
-export function PinIcon({ color = "#ffc309" }: IconProps) {
+export function PinIcon({ color = "#c8a856" }: IconProps) {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />

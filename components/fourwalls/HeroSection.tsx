@@ -1,30 +1,30 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { heroMosaic, stats } from "./data";
 import MotionReveal from "./MotionReveal";
 import { Button, Container } from "./shared";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative flex min-h-screen flex-col overflow-hidden bg-[#012c3d] pt-15 md:pt-22">
-      <div className="hero-orb hero-orb--slow pointer-events-none absolute -right-[200px] -top-[200px] h-[700px] w-[700px] rounded-full border border-[#01c1ff12]" />
-      <div className="hero-orb pointer-events-none absolute right-[50px] top-[-50px] h-[450px] w-[450px] rounded-full border border-[#00dfd70d]" />
-      <div className="hero-orb hero-orb--fast pointer-events-none absolute right-[220px] top-[180px] h-[200px] w-[200px] rounded-full border border-[#ffc30914]" />
+    <section id="home" className="relative flex min-h-screen flex-col overflow-hidden bg-[#1a2e20] pt-15 md:pt-22">
+      <div className="hero-orb hero-orb--slow pointer-events-none absolute -right-[200px] -top-[200px] h-[700px] w-[700px] rounded-full border border-[#c8a85612]" />
+      <div className="hero-orb pointer-events-none absolute right-[50px] top-[-50px] h-[450px] w-[450px] rounded-full border border-[#c8a8560d]" />
+      <div className="hero-orb hero-orb--fast pointer-events-none absolute right-[220px] top-[180px] h-[200px] w-[200px] rounded-full border border-[#c8a85614]" />
 
       <div className="flex flex-1 items-center">
         <div className="mx-auto w-full max-w-[1480px] px-5 sm:px-8 md:px-14 lg:px-21">
           <div className="grid items-center gap-8 py-10 md:grid-cols-[41%_59%] md:gap-10 md:py-16 lg:gap-8">
             <div>
               <MotionReveal delayMs={40}>
-                <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#f9693a38] bg-[#f9693a1a] px-4 py-[0.38rem] text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[#f9693a]">
-                  <span className="h-[5px] w-[5px] rounded-full bg-[#f9693a] animate-[pulse_2s_infinite]" />
+                <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#c8a85638] bg-[#c8a8561a] px-4 py-[0.38rem] text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[#c8a856]">
+                  <span className="h-[5px] w-[5px] rounded-full bg-[#c8a856] animate-[pulse_2s_infinite]" />
                   South India&apos;s Trusted Design Studio
                 </div>
               </MotionReveal>
               <MotionReveal delayMs={150}>
-                <h1 className="mb-6 font-[var(--font-outfit)] text-[clamp(3rem,4.8vw,5.2rem)] font-bold leading-[1.08] text-white">
+                <h1 className="mb-6 font-(family-name:--font-outfit) text-[clamp(3rem,4.8vw,5.2rem)] font-bold leading-[1.08] text-white">
                   <span className="block">Where Vision</span>
-                  <span className="block text-[#01c1ff]">Meets</span>
-                  <span className="block italic text-[#ffc309]">Construction</span>
+                  <span className="block text-[#c8a856]">Meets</span>
+                  <span className="block italic text-[#c8a856]">Construction</span>
                 </h1>
               </MotionReveal>
               <MotionReveal delayMs={260}>
@@ -50,8 +50,8 @@ export default function HeroSection() {
                         fill
                         className="cinematic-image object-cover transition-transform duration-700"
                       />
-                      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#011018a6] to-transparent to-55%" />
-                      <span className="absolute bottom-4 left-5 font-(--font-outfit) text-[0.85rem] italic text-white/70">
+                      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#0c1810a6] to-transparent to-55%" />
+                      <span className="absolute bottom-4 left-5 font-(family-name:--font-outfit) text-[0.85rem] italic text-white/70">
                         {item.title}
                       </span>
                     </MotionReveal>
@@ -85,8 +85,8 @@ export default function HeroSection() {
                       fill
                       className="cinematic-image object-cover transition-transform duration-700"
                     />
-                    <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#011018a6] to-transparent to-55%" />
-                    <span className="absolute bottom-4 left-5 font-(--font-outfit) text-[0.85rem] italic text-white/70">
+                    <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#0c1810a6] to-transparent to-55%" />
+                    <span className="absolute bottom-4 left-5 font-(family-name:--font-outfit) text-[0.85rem] italic text-white/70">
                       {item.title}
                     </span>
                   </MotionReveal>
@@ -98,15 +98,15 @@ export default function HeroSection() {
       </div>
 
       {/* ── Stats Bar ── */}
-      <div className="relative overflow-hidden border-t border-white/[0.05] bg-gradient-to-b from-[#011a27] to-[#010d18]">
+      <div className="relative overflow-hidden border-t border-white/[0.05] bg-gradient-to-b from-[#0f1a12] to-[#080e0a]">
         {/* Top gold glow line */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#ffc30960] to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#c8a85660] to-transparent" />
 
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3">
             {stats.map(([number, label, sub], index) => {
-              const accents = ["#ffc309", "#01c1ff", "#00dfd7"];
-              const accent = accents[index] ?? "#ffc309";
+              const accents = ["#c8a856", "#c8a856", "#c8a856"];
+              const accent = accents[index] ?? "#c8a856";
               return (
                 <MotionReveal
                   key={label}

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
   --font-outfit: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
@@ -12,16 +12,24 @@ html {
 body {
   margin: 0;
   overflow-x: clip;
-  font-family: var(--font-outfit), sans-serif;
+  font-family: var(--font-outfit), "Avenir Next", "Segoe UI", sans-serif;
 }
 
 * {
   box-sizing: border-box;
+  font-family: inherit;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: var(--font-outfit), "Avenir Next", "Segoe UI", sans-serif;
 }
 
 ::selection {
-  background: #01c1ff;
-  color: #012c3d;
+  background: #c8a856;
+  color: #1a2e20;
 }
 
 .cinematic-reveal {
@@ -124,7 +132,7 @@ body {
   left: 0;
   right: 0;
   height: 50.5%;
-  background: #012c3d;
+  background: #1a2e20;
   will-change: transform;
   transition: transform 0.95s cubic-bezier(0.76, 0, 0.24, 1);
 }
@@ -152,7 +160,7 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent 0%, #ffc309 30%, #01c1ff 70%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, #c8a856 30%, #c8a856 70%, transparent 100%);
   transform: translateY(-50%) scaleX(0);
   transform-origin: center;
   transition:
@@ -202,7 +210,7 @@ body {
   font-size: 0.68rem;
   font-weight: 400;
   letter-spacing: 0.24em;
-  color: #01c1ff;
+  color: #c8a856;
   text-transform: uppercase;
   animation: preloader-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.52s both;
 }
@@ -220,7 +228,7 @@ body {
 .preloader__progress-fill {
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, #ffc309 0%, #01c1ff 100%);
+  background: linear-gradient(90deg, #c8a856 0%, #c8a856 100%);
   border-radius: 2px;
   animation: preloader-fill 1.65s cubic-bezier(0.4, 0, 0.2, 1) 0.82s both;
 }
