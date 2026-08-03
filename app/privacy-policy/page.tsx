@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const sections = [
   {
-    title: "Information We Collect",
+    title: "Informations We Collect",
     content: [
       "When you fill out our contact or enquiry form, we collect personal details including your first name, last name, email address, phone number, the service you are interested in, and any additional message you provide.",
       "We may also collect non-personal information such as browser type, device type, pages visited, and time spent on our website through standard web analytics tools. This information helps us understand how visitors use our site.",
