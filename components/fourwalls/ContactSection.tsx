@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   FacebookIcon,
@@ -164,7 +165,11 @@ export default function ContactSection() {
                 {formState === "loading" ? "Sending…" : "Get Free Consultation"}
               </button>
               <p className="mt-2 text-[0.72rem] text-white/38">
-                We respond within 24 hours. Your information is kept strictly confidential.
+                We respond within 24 hours. By submitting, you agree to our{" "}
+                <Link href="/privacy-policy" className="text-[#c8a856]/80 underline underline-offset-2 hover:text-[#c8a856]">
+                  Privacy Policy
+                </Link>
+                . Your information is kept strictly confidential.
               </p>
             </form>
           </MotionReveal>

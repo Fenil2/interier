@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, Fragment } from "react";
 
 type Status = "NEW" | "CONTACTED" | "QUALIFIED" | "CLOSED";
 
@@ -181,9 +181,8 @@ export default function DashboardPage() {
                   </thead>
                   <tbody className="divide-y divide-[#1e3824]">
                     {leads.map((lead) => (
-                      <>
+                      <Fragment key={lead.id}>
                         <tr
-                          key={lead.id}
                           className="cursor-pointer transition-colors hover:bg-[#1a2e20]/60"
                           onClick={() => setExpandedId(expandedId === lead.id ? null : lead.id)}
                         >
@@ -219,14 +218,14 @@ export default function DashboardPage() {
                           </td>
                         </tr>
                         {expandedId === lead.id && lead.message && (
-                          <tr key={`${lead.id}-msg`} className="bg-[#0f1a12]/40">
+                          <tr className="bg-[#0f1a12]/40">
                             <td colSpan={6} className="px-5 py-3">
                               <span className="text-[0.72rem] font-semibold uppercase tracking-widest text-[#6a8870]">Message: </span>
                               <span className="text-[0.85rem] text-white/60">{lead.message}</span>
                             </td>
                           </tr>
                         )}
-                      </>
+                      </Fragment>
                     ))}
                   </tbody>
                 </table>

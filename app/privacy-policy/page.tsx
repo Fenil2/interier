@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
             We respect your privacy and are committed to protecting your personal information. This policy explains what we collect, how we use it, and your rights.
           </p>
           <p className="mt-5 text-[0.78rem] text-[#6a8870]">
-            Effective Date: <span className="text-[#c8a856]">1 January 2025</span> &nbsp;·&nbsp; Last Updated: <span className="text-[#c8a856]">22 May 2026</span>
+            Effective Date: <span className="text-[#c8a856]">1 January 2025</span> &nbsp;·&nbsp; Last Updated: <span className="text-[#c8a856]">3 August 2026</span>
           </p>
         </div>
       </div>
